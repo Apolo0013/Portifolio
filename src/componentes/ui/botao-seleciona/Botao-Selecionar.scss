@@ -32,7 +32,7 @@
 
 //Responvidade para dispositivos moveis
 //Para celulares
-@media (max-width: 500px) {
+@media (max-width: 500px) and (pointer: coarse) {
     .conteiner-botao-selecionar  {
         min-width: rem(120);
         button {
@@ -43,7 +43,7 @@
 }
 
 //largura <= 400px 
-@media (max-width: 400px) {
+@media (max-width: 400px) and (pointer: coarse) {
     .conteiner-botao-selecionar > button {
         height: rem(40);
     }

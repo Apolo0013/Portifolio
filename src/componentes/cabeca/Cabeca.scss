@@ -9,7 +9,6 @@
     * {
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
         color: white;
-        border: 1px solid red;
     }
 
     .conteiner-cabeca {
@@ -114,7 +113,7 @@
 //Responsividade
 //para celular
 //largura <= 500px
-@media (max-width: 500px) {
+@media (max-width: 500px) and (pointer: coarse) {
     .wraper-conteiner-cabeca > .conteiner-cabeca {
         gap: rem(5);
 
@@ -137,7 +136,7 @@
 }
 
 //largura <= 400px 
-@media (max-width: 400px) {
+@media (max-width: 400px ) and (pointer: coarse) {
     .wraper-conteiner-cabeca > .conteiner-cabeca {
         gap: 0;
 
