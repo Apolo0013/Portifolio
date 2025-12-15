@@ -1,0 +1,147 @@
+@use '../../utils/utils.scss' as *;
+
+.wraper-conteiner-main-info-projeto {
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    //top: -100%;
+    background: $fundo-projetoinfo;
+    opacity: 0;
+    animation: show-info-projeto 0.7s ease-in-out 1 forwards;
+
+    //Efeito de entrada
+    @keyframes show-info-projeto {
+        from {
+            opacity: 0;
+            top: -100%;
+        }
+        to {
+            opacity: 1;
+            top: 0;
+        }
+    }
+    //Efeito de saida
+    @keyframes side-info-projeto {
+        from {
+            opacity: 1;
+            left: 0;
+        }
+        to {
+            opacity: 0;
+            left: -100%;
+        }
+    }
+
+    //Resto do style
+    .conteiner-botao-voltar-projeto-info {
+        width: 100%;
+        height: rem(70);
+        border-bottom: 4px solid white;
+
+        img {
+            aspect-ratio: 1 / 1;
+            height: 100%;
+            cursor: pointer;
+            transition: 0.2s linear;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.32);
+            }
+        }
+    }
+
+    //Sessao com informacao comum.
+    .conteiner-info-projeto-info-comum {
+        gap: rem(30);
+        display: flex;
+        flex-direction: row;
+        padding: rem(5);
+        width: 100%;
+        height: auto;
+        margin-bottom: 5vh;
+
+        .conteiner-info-comum-escrito {
+            width: 70%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: rem(40);
+
+            .conteiner-resumo-info-comum, .wraper-conteiner-tag {gap: rem(20);}
+
+            //linguagem/tecnologia
+            .wraper-conteiner-tag {
+                display: flex;
+                flex-direction: column;
+                height: rem(100);
+                width: 100%;
+                flex: 1; // obrigado ele ocupar mais espaco
+            }
+
+            //Resumo do projeto
+            .conteiner-resumo-info-comum {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+
+                .p-resumo-info-comum {
+                    width: 100%;
+                }
+            }
+
+            //Link para os site
+            .conteiner-info-comum-link {
+                display: flex;
+                flex-direction: column;
+                gap: rem(10);
+                width: 100%;
+                height: auto;
+                
+
+                .botao-link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30%;
+                    height: rem(70);
+                    background: $fundo;
+                    gap: rem(10);
+                    padding: rem(5);
+                    border-radius: 5px;
+                    border: 3px solid $border-botaolink;
+                    transition: 0.2s ease-in;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.01) translateX(rem(15));
+                        background: $hover-botaolink;
+                    }
+
+                    p {
+                        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+                        color: white;
+                    }
+
+                    img {
+                        object-fit: contain;
+                        aspect-ratio: 1 / 1;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .print-start-info-comum {
+            filter: blur(1px);
+            padding: rem(5);
+            margin: rem(20) rem(20) 0 0;
+            aspect-ratio: 3 / 4;
+            width: 30%;
+            height: auto;
+        }
+    }
+}

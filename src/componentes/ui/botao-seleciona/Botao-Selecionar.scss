@@ -1,0 +1,22 @@
+@use '../../../utils/utils.scss' as *;
+
+.conteiner-botao-selecionar {
+    min-width: rem(140);
+
+    button {
+        font-family: 'Roboto';
+        transition: 0.3s ease;
+        background: $botao;
+        border: 0;
+        outline: 0;
+        width: 100%;
+        height: rem(50);
+        font-weight: bold;
+        font-size: rem(23);
+        border: 2px solid $botao-bordar;
+        border-radius: rem(5);
+        cursor: pointer;
+
+        &:hover {transform: scale(0.95); filter: brightness(0.9);}
+    }
+}

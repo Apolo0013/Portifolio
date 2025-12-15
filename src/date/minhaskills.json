@@ -1,0 +1,47 @@
+[
+    {
+        "title": "React",
+        "text": "hooks, controle de estado, composição de componentes, renderização condicional",
+        "tag": "RC"
+    },
+    {
+        "title": "TypeScript",
+        "text": "tipagem estática, interfaces, types, segurança em componentes e funções",
+        "tag": "TS"
+    },
+    {
+        "title": "JavaScript",
+        "text": "lógica de programação, array methods, async/await, closures",
+        "tag": "JS"
+    },
+    {
+        "title": "CSS",
+        "text": "Flexbox, Grid, responsividade, organização de estilos, animações básicas",
+        "tag": "CSS"
+    },
+    {
+        "title": "HTML",
+        "text": "estrutura semântica, acessibilidade básica, boas práticas",
+        "tag": "HTML"
+    },
+    {
+        "title": "APIs",
+        "text": "consumo de APIs REST, fetch/axios, tratamento de erros, estados de loading",
+        "tag": "API"
+    },
+    {
+        "title": "Python",
+        "text": "lógica, scripts simples, manipulação de dados",
+        "tag": "PY"
+    },
+    {
+        "title": "C#",
+        "text": "POO, lógica de backend, estruturação de projetos",
+        "tag": "CS"
+    },
+    {
+        "title": "Ferramentas",
+        "text": "Git, GitHub, ESLint, Vite, organização de projetos",
+        "tag": "FR"
+    }
+]

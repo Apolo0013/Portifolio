@@ -1,0 +1,30 @@
+@use '../../utils/utils.scss' as *;
+
+.conteiner-projetos {
+    flex-direction: column;
+    padding: 0;
+    gap: rem(40);
+
+    h1 {padding: rem(10);}
+
+    .wraper-conteiner-cards {
+        position: relative;
+        background: rgba(255, 255, 255, 0.327);
+        width: 100%;
+        height: auto;
+        padding: rem(10) 0 rem(10) 0;
+        overflow-x: visible;
+
+        .conteiner-cards-scroll {
+            width: 100%;
+            overflow: visible;
+            overflow-x: hidden;
+            gap: rem(20); 
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 rem(100) 0 rem(100);
+        }
+    }
+}

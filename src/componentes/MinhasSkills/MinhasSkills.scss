@@ -1,0 +1,46 @@
+@use '../.././utils/utils.scss' as *;
+
+.conteiter-minhas-habilidade {
+    flex-direction: column;
+    gap: rem(40);
+
+    
+    .conteiner-habilidades {
+        display: flex;
+        flex-direction: column;
+        gap: rem(50);
+
+        .skill-sobre {
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            height: rem(80);
+
+            .skill-sobre-text {
+                display: flex;
+                gap: rem(5);
+                flex-direction: column;
+                height: 100%;
+                width: 80%;
+                
+                p {text-indent: 5px;}
+            }
+
+            .skill-sobre-img-tag {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                height: 100%;
+                width: 20%;
+
+                img {
+                    aspect-ratio: 1 / 1;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

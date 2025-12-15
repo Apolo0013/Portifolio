@@ -1,0 +1,61 @@
+@use './utils/utils.scss' as *;
+
+.App {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: $fundo;
+}
+
+//Class utils
+.bold-italic {
+    font-weight: bold;
+    font-style: italic;
+}
+//Section, usada para todos os componentes
+.sessao-corpo {
+    transition: 0.5s ease-in-out;
+    width: 100%;
+    height: auto;
+    display: flex;
+    border-top: 4px solid white;
+    padding: rem(10);
+
+    * {
+        color: white;
+    }
+}
+
+.h1-main {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: rem(40);
+    color: white;
+}
+
+.h2-main {
+    color: white;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: rem(30);
+}
+
+.p-main {
+    color: white;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: rem(17);
+    text-align: justify;
+    hyphens: auto;
+    text-indent: rem(20);
+}
+
+//Essas class vao trabalhar com funcao UseObserverShow no utils.tsx
+.conteiner-show { // vai mostrar conteiner
+    opacity: 1;
+    transform: none;
+}
+.conteiner-side { // vai esconder
+    opacity: 0;
+    transform: translateX(-20%);
+}

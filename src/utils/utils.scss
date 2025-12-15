@@ -1,0 +1,24 @@
+//Fontes
+// - Sora
+// - Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+
+//funcao que transforma px em rem
+@function rem($px) {
+    @return ($px / 16) * 1rem;
+}
+
+
+//Pelatas
+//Fundo
+$fundo: #0F0F0F; 
+$cards: #1A1A1A;
+$texto: #FFFFFF;
+$botao: #4A90E2;
+$botao-bordar: #305f94 ;
+$texto-segundario: #9B9B9B;
+
+$fundo-projetoinfo: #171414;
+$fundo-botaolink: #1f1a1a;
+$border-botaolink: #d3d1d1;
+$hover-botaolink: #4c4747;

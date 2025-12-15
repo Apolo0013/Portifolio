@@ -1,0 +1,68 @@
+@use '../../../utils/utils.scss' as *;
+
+.conteiner-info-projeto-sobre-mais {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-top: 4px solid white;
+    padding: rem(5);
+    gap: rem(20);
+    margin-bottom: 10vh;
+
+    .p-sobre-mais {
+        width: 70%;
+        text-wrap: wrap;
+        min-width: 0;
+        //quebrar esse gld
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .conteiner-info-projeto-sobre-mais-imagens {
+        user-select: none;
+        background: rgba(255, 255, 255, 0.327);
+        padding: rem(5);
+        width: 100%;
+        height: rem(460);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(30);
+
+        .conteiner-passa-imagem {
+            aspect-ratio: 1 / 1;
+            height: 20%;
+            border-radius: 40%;
+            background: $fundo;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s ease;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(0.99);
+                background: $hover-botaolink;
+                animation: treme 0.1s ease-in infinite forwards;
+
+                @keyframes treme {
+                    50% {transform: rotate(-2deg);}
+                    100% {transform: rotate(2deg);}
+                }
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        img {
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

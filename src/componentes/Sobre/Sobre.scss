@@ -1,0 +1,20 @@
+@use '../../utils/utils.scss' as *;
+
+.conteiner-sobre-mim {
+    flex-direction: column;
+    padding-bottom: rem(100) !important;
+    gap: rem(50);
+
+    .wraper-text-sobre-mim {
+        width: 60%;
+        height: auto;
+
+        .p-text-sobre-mim {
+            font-family: 'Roboto';
+            width: 100%;
+            text-align: justify;
+            font-size: rem(20);
+            text-indent: rem(30);
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@use '../../utils/utils.scss' as *;
+
+.wraper-conteiner-card {
+    aspect-ratio: 3 / 4;
+    height: rem(400);
+    overflow: visible;
+
+    .conteiner-card {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        background: $cards;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        height: 100%;
+
+        &:hover {
+            transform: scale(0.98) translateY(rem(-3));
+        }
+
+        //Imagem
+        .conteiner-card-img-projeto {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            filter: blur(5px) brightness(0.5);
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        //Informacao projeto
+        .conteiner-card-info-projeto {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(10);
+
+            * {
+                font-family: 'Roboto';
+                color: $texto;
+            }
+
+            //Informacoes
+            .nome-projeto-card {
+                margin-top: 20%;
+                width: 100%;
+                text-align: center;
+            }
+
+            //Resumo
+            .card-info-projeto-text {
+                display: flex;
+                flex-direction: column;
+                padding: rem(5);
+                width: 100%;
+                height: auto;
+                gap: rem(5);
+
+                .card-info-projeto-text-h3 {
+                    font-size: rem(20);
+                }
+
+                .card-info-projeto-text-p {
+                    font-size: rem(18);
+                    text-align: justify;
+                    hyphens: auto;
+                }
+            }
+        }
+    }
+}

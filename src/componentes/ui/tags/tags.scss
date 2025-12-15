@@ -1,0 +1,27 @@
+@use '../../../utils/utils.scss' as *;
+
+
+//Tags
+.conteiner-tags {
+    padding: rem(3);
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.149);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: rem(5);
+
+    .conteiner-tag-img {
+        height: rem(55);
+        aspect-ratio: 1 / 1;
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
