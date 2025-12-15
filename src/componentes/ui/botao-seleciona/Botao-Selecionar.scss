@@ -20,3 +20,31 @@
         &:hover {transform: scale(0.95); filter: brightness(0.9);}
     }
 }
+
+
+//Responsividade
+//largura <= 700px
+@media (max-width: 700px) {
+    .conteiner-botao-selecionar > button {
+        font-size: rem(20);
+    }
+}
+
+//Responvidade para dispositivos moveis
+//Para celulares
+@media (max-width: 500px) {
+    .conteiner-botao-selecionar  {
+        min-width: rem(120);
+        button {
+            height: rem(45);
+            font-size: rem(18);
+        }
+    }
+}
+
+//largura <= 400px 
+@media (max-width: 400px) {
+    .conteiner-botao-selecionar > button {
+        height: rem(40);
+    }
+}
