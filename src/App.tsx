@@ -1,5 +1,5 @@
 //SCSS
-import { useEffect, useRef, type JSX } from 'react'
+import { useEffect, useRef} from 'react'
 import './App.scss'
 //COMPONENTES
 import Cabeca from './componentes/cabeca/Cabeca'

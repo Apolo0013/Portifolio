@@ -1,3 +1,16 @@
+//imagens
+import TagTS from "@/assets/tags/tag-typescript.svg"
+import TagJS from "@/assets/tags/tag-javascript.svg"
+import TagCSS from "@/assets/tags/tag-css.svg"
+import TagSCSS from "@/assets/tags/tag-scss.svg"
+import TagHTML from "@/assets/tags/tag-html.svg"
+import TagRC from "@/assets/tags/tag-rc.svg"
+import TagCS from "@/assets/tags/tag-cs.svg"
+import TagPY from "@/assets/tags/tag-py.svg"
+import TagAPI from "@/assets/tags/tag-api.svg"
+import TagFR from "@/assets/tags/tag-ferramentas.svg"
+
+
 //CHATGPT
 export function findLastIndex<T>(arr: T[], fn: (value: T, index: number, array: T[]) => boolean): number {
     for (let i = arr.length - 1; i >= 0; i--) {
@@ -22,14 +35,14 @@ export type TypePATHTAG = {
 }
 
 export const PATHTAG: TypePATHTAG = {
-    TS: `src\\assets\\tags\\tag-typescript.svg`,
-    JS: 'src\\assets\\tags\\tag-javascript.svg',
-    CSS: 'src\\assets\\tags\\tag-css.svg',
-    SCSS: 'src\\assets\\tags\\tag-scss.svg',
-    HTML: 'src\\assets\\tags\\tag-html.svg',
-    RC: "src\\assets\\tags\\tag-rc.svg",
-    CS: "src\\assets\\tags\\tag-cs.svg",
-    PY: "src\\assets\\tags\\tag-py.svg",
-    API: "src\\assets\\tags\\tag-api.svg",
-    FR: "src\\assets\\tags\\tag-ferramentas.svg"
+    TS: TagTS,
+    JS: TagJS,
+    CSS: TagCSS,
+    SCSS: TagSCSS,
+    HTML: TagHTML,
+    RC: TagRC,
+    CS: TagCS,
+    PY: TagPY,
+    API: TagAPI,
+    FR: TagFR
 }
