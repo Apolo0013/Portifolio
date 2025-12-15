@@ -1,14 +1,14 @@
 //imagens
-import TagTS from "@/assets/tags/tag-typescript.svg"
-import TagJS from "@/assets/tags/tag-javascript.svg"
-import TagCSS from "@/assets/tags/tag-css.svg"
-import TagSCSS from "@/assets/tags/tag-scss.svg"
-import TagHTML from "@/assets/tags/tag-html.svg"
-import TagRC from "@/assets/tags/tag-rc.svg"
-import TagCS from "@/assets/tags/tag-cs.svg"
-import TagPY from "@/assets/tags/tag-py.svg"
-import TagAPI from "@/assets/tags/tag-api.svg"
-import TagFR from "@/assets/tags/tag-ferramentas.svg"
+import TagTS from "../assets/tags/tag-typescript.svg"
+import TagJS from "../assets/tags/tag-javascript.svg"
+import TagCSS from "../assets/tags/tag-css.svg"
+import TagSCSS from "../assets/tags/tag-scss.svg"
+import TagHTML from "../assets/tags/tag-html.svg"
+import TagRC from "../assets/tags/tag-rc.svg"
+import TagCS from "../assets/tags/tag-cs.svg"
+import TagPY from "../assets/tags/tag-py.svg"
+import TagAPI from "../assets/tags/tag-api.svg"
+import TagFR from "../assets/tags/tag-ferramentas.svg"
 
 
 //CHATGPT
