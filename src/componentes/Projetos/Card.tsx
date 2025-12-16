@@ -7,28 +7,32 @@ import './Card.scss'
 import { UseObserverCard } from '../../utils/utils.tsx'
 //Componentes
 import TagsInline from '../ui/tags/tags.tsx'
+//Imagens
+import { PathImagemProjeto } from '../../utils/Imagem.ts'
 
 //PropsCard: type para os props do Card
 interface PropsCard extends ProjetoDate { // vou herda os tipo do ProjetoDate
     GetRef: RefObject<Array<HTMLDivElement | null>>,
-    onClick: () => void
+    onClick: () => void,
+    RefConteinerScroll: RefObject<HTMLElement | null> // esse conteiner é o carinha que sera usado para manipular o scroll
 }
 
 
-function Card({ nomeProjeto, pathPrint, resumo, tags, onClick, GetRef}: PropsCard ) {
+function Card({ nomeProjeto, resumo, tags, IDNAME ,onClick, GetRef, RefConteinerScroll}: PropsCard ) {
     //State do data set dele
     const [StateDataSet, SetDataSet] = useState<Typetipo>('nao-visto')
     //Referncia ao conteiner
     const RefConteiner = useRef<HTMLDivElement | null>(null)
     useEffect(() => {
-        if (!RefConteiner.current) return
+        if (!RefConteiner.current || !RefConteinerScroll.current) return
         //Pegando a referncia...
         //caso ele nao esteja na lista, evita mulplicacao de elemenos
         if (!GetRef.current.some(el => el == RefConteiner.current)) GetRef.current.push(RefConteiner.current) //colocando a referencia para ca
         //observer
         UseObserverCard({ // observado
             //Ele basicamente vai add "visto" e "nao-visto" no data-visto, falando se ele nao esta sendo visto
-            el: RefConteiner,
+            root: RefConteinerScroll.current,
+            target: RefConteiner.current,
             SetData: SetDataSet
         })
     }, [])
@@ -37,14 +41,13 @@ function Card({ nomeProjeto, pathPrint, resumo, tags, onClick, GetRef}: PropsCar
             <div className="conteiner-card" onClick={onClick}>
                 {/*background*/}
                 <div className="conteiner-card-img-projeto">
-                    <img src={pathPrint} alt="Foto do Projeto" />
+                    <img src={PathImagemProjeto[IDNAME].PrintProjetoCard} alt="Foto do Projeto" />
                 </div>
                 {/*front*/}
                 <div className="conteiner-card-info-projeto">
                     <h1 className="nome-projeto-card">
                         {nomeProjeto}
                     </h1>
-
                     <span className='card-info-projeto-text'>
                         <h3 className='card-info-projeto-text-h3'>Resumo</h3>
                         <p className='card-info-projeto-text-p'>{resumo}</p>

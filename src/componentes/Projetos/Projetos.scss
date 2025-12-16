@@ -1,5 +1,9 @@
 @use '../../utils/utils.scss' as *;
 
+:root {
+    --gap-conteiner-scroll: 7px;
+}
+
 .conteiner-projetos {
     flex-direction: column;
     padding: 0;
@@ -16,15 +20,48 @@
         overflow-x: visible;
 
         .conteiner-cards-scroll {
+            position: relative;
             width: 100%;
+            height: rem(400);
             overflow: visible;
             overflow-x: hidden;
-            gap: rem(20); 
+            gap: var(--gap-conteiner-scroll); 
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: flex-start;
             padding: 0 rem(100) 0 rem(100);
         }
+    }
+}
+
+//Responsividade
+//largura <= 600px
+@media (max-width: 600px) {
+    .conteiner-projetos > .wraper-conteiner-cards > .conteiner-cards-scroll {
+        height: rem(380) !important;
+    }
+
+    :root {
+        --gap-conteiner-scroll: 100px;
+    }
+}
+
+//Dispositivos moveis
+//largura <= 500px
+@media (max-width: 500px) and (pointer: coarse) {
+    .conteiner-projetos > .wraper-conteiner-cards > .conteiner-cards-scroll {
+        padding: 0 rem(75) 0 rem(75);
+        height: rem(350) !important;
+        //liberar o scroll para o mobile
+        overflow-x: scroll;
+    }
+}
+
+//larguran <= 400px
+@media (max-width: 400px) and (pointer: coarse) {
+    .conteiner-projetos > .wraper-conteiner-cards > .conteiner-cards-scroll {
+        padding: 0 rem(57) 0 rem(57);
+        height: rem(330) !important;
     }
 }

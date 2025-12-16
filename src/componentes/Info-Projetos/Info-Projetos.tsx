@@ -5,6 +5,7 @@ import type {ProjetoDate} from '../../type'
 import BackIMG from '../../assets/imagens/back.svg'
 import GitHubIMG from '../../assets/imagens/github.svg'
 import SiteIMG from '../../assets/imagens/site.svg'
+import { PathImagemProjeto } from '../../utils/Imagem'
 //Componentes
 import TagsInline from '../ui/tags/tags'
 import Info_ProjetosMais from './Info-ProjetosMais/Info-Projetos+'
@@ -50,11 +51,14 @@ function Info_Projetos({ info }: { info: ProjetoDate }) {
                     </span>
                 </div>
                 <div className='print-start-info-comum'>
-                    <img src={info.pathPrint} alt="Print do projeto" />
+                    <img src={PathImagemProjeto[info.IDNAME].PrintProjetoCard} alt="Print do projeto" />
                 </div>
             </section>
             {/*Essa sessao é ondem terar a sessao de imagem e um pequeno texto mais detalhado*/}
-            <Info_ProjetosMais SobreMaisDate={info.sobreMais} />
+            <Info_ProjetosMais SobreMaisDate={{
+                texto: info.sobreMais.texto,
+                pathImagem: PathImagemProjeto[info.IDNAME].SobreMaisImagens
+            }} />
         </main>
     )
 }

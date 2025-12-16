@@ -28,3 +28,18 @@
 .deagrade-left {background: linear-gradient(270deg, transparent, $fundo);}
 //direito
 .deagrade-right {background: linear-gradient(270deg, $fundo, transparent);}
+
+//Responsividade
+//larunra <= 600px 
+@media (max-width: 600px) {
+    .conteiner-move-scroll {
+        width: rem(70);
+    }
+}
+
+//Dispositivos moveis
+@media (max-width: 500px) and (pointer: coarse) {
+    .conteiner-move-scroll {
+        width: rem(50);
+    }
+}

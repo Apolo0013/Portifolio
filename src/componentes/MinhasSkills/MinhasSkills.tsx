@@ -2,7 +2,7 @@ import './MinhasSkills.scss'
 //json 
 import HabilidadeJSON from '../../date/minhaskills.json'
 //Utils
-import { PATHTAG, type TypePATHTAG } from '../../utils/utils'
+import { PATHTAG, type TypePATHTAG } from '../../utils/Imagem'
 import Show_Conteiner from '../ui/show-conteiner/show-conteiner'
 
 //Texto simple descrevendo as habilidade

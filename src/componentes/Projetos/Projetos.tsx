@@ -24,14 +24,15 @@ function Projetos({GetRef}: {GetRef: RefObject<HTMLElement | null>}) {
             listatempoElemento.push(
                 <Card
                     //heranca
+                    IDNAME={info.IDNAME}
                     nomeProjeto={info.nomeProjeto} // nome do projeto
-                    pathPrint={info.pathPrint} // print do projeto
                     resumo={info.resumo} // resumo do projeto
                     tags={info.tags} // tags
                     linkGitHub={info.linkGitHub} // link do github
                     linkSite={info.linkSite} // link do site hospedado
                     sobreMais={info.sobreMais}
                     //Props
+                    RefConteinerScroll={RefConteinerCardsScroll}
                     GetRef={RefConteinerCardsProjetos} // esse GetRef ai pegar a referencia do conteinero wraper lado dos cards
                     onClick={(): void => {
                         console.log(info)

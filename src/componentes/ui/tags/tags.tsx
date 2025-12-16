@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './tags.scss'
 //Utils
-import {PATHTAG, type TypePATHTAG} from '../../../utils/utils'
+import {PATHTAG, type TypePATHTAG} from '../../../utils/Imagem'
 
 function TagsInline({ listatag }: { listatag: string[] }) {
     function GetPathsImgTag() {

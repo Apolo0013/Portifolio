@@ -1,5 +1,6 @@
 [
     {
+        "IDNAME": "ENCICLOPEDIANEGRA",
         "nomeProjeto": "Enciclopedia Negra",
         "pathPrint": "src\\assets\\print-projeto\\print-enciclopedia-negra.png",
         "area": "FrontEnd",
@@ -9,28 +10,136 @@
         "linkSite": "https://apolo0013.github.io/Enciclopedia-Negra/#/home/",
         "sobreMais": {
             "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-            "pathImagem": [
-                "src\\assets\\print-projeto\\Enciclopedia-Negra\\imagem1.jpg",
-                "src\\assets\\print-projeto\\Enciclopedia-Negra\\imagem2.jpg",
-                "src\\assets\\print-projeto\\Enciclopedia-Negra\\imagem3.jpg",
-                "src\\assets\\print-projeto\\Enciclopedia-Negra\\imagem4.jpg"
-            ]
+            "pathImagem": []
         }
     },
     {
+        "IDNAME": "TABELAPERIODICA",
         "nomeProjeto": "Tabela Periodica",
         "area": "FrontEnd",
-        "pathPrint": "src\\assets\\print-projeto\\print-tabela.png",
+        "pathPrint": "../assets/print-projeto/print-tabela.png",
         "tags": ["JS", "CSS", "HTML", "RC"],
         "resumo": "Criacao de um site que cujo o objetivo é expo os elementos",
         "linkGitHub": "https://github.com/Apolo0013/tabela-periodica",
         "linkSite": "https://apolo0013.github.io/tabela-periodica/",
         "sobreMais": {
             "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-             "pathImagem": [
-                "src\\assets\\print-projeto\\Tabela-Periodica\\imagem1.jpg",
-                "src\\assets\\print-projeto\\Tabela-Periodica\\imagem2.jpg"
-            ]
+            "pathImagem": []
+        }
+    },
+    {
+        "IDNAME": "ENCICLOPEDIANEGRA",
+        "nomeProjeto": "Enciclopedia Negra",
+        "pathPrint": "src\\assets\\print-projeto\\print-enciclopedia-negra.png",
+        "area": "FrontEnd",
+        "tags": ["JS", "HTML", "SCSS", "CSS", "RC"],
+        "resumo": "Criacao de um site para a representacao negra",
+        "linkGitHub": "https://github.com/Apolo0013/Enciclopedia-Negra",
+        "linkSite": "https://apolo0013.github.io/Enciclopedia-Negra/#/home/",
+        "sobreMais": {
+            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "pathImagem": []
+        }
+    },
+    {
+        "IDNAME": "TABELAPERIODICA",
+        "nomeProjeto": "Tabela Periodica",
+        "area": "FrontEnd",
+        "pathPrint": "../assets/print-projeto/print-tabela.png",
+        "tags": ["JS", "CSS", "HTML", "RC"],
+        "resumo": "Criacao de um site que cujo o objetivo é expo os elementos",
+        "linkGitHub": "https://github.com/Apolo0013/tabela-periodica",
+        "linkSite": "https://apolo0013.github.io/tabela-periodica/",
+        "sobreMais": {
+            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "pathImagem": []
+        }
+    }
+    ,
+    {
+        "IDNAME": "ENCICLOPEDIANEGRA",
+        "nomeProjeto": "Enciclopedia Negra",
+        "pathPrint": "src\\assets\\print-projeto\\print-enciclopedia-negra.png",
+        "area": "FrontEnd",
+        "tags": ["JS", "HTML", "SCSS", "CSS", "RC"],
+        "resumo": "Criacao de um site para a representacao negra",
+        "linkGitHub": "https://github.com/Apolo0013/Enciclopedia-Negra",
+        "linkSite": "https://apolo0013.github.io/Enciclopedia-Negra/#/home/",
+        "sobreMais": {
+            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "pathImagem": []
+        }
+    },
+    {
+        "IDNAME": "TABELAPERIODICA",
+        "nomeProjeto": "Tabela Periodica",
+        "area": "FrontEnd",
+        "pathPrint": "../assets/print-projeto/print-tabela.png",
+        "tags": ["JS", "CSS", "HTML", "RC"],
+        "resumo": "Criacao de um site que cujo o objetivo é expo os elementos",
+        "linkGitHub": "https://github.com/Apolo0013/tabela-periodica",
+        "linkSite": "https://apolo0013.github.io/tabela-periodica/",
+        "sobreMais": {
+            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "pathImagem": []
+        }
+    }
+    ,
+    {
+        "IDNAME": "ENCICLOPEDIANEGRA",
+        "nomeProjeto": "Enciclopedia Negra",
+        "pathPrint": "src\\assets\\print-projeto\\print-enciclopedia-negra.png",
+        "area": "FrontEnd",
+        "tags": ["JS", "HTML", "SCSS", "CSS", "RC"],
+        "resumo": "Criacao de um site para a representacao negra",
+        "linkGitHub": "https://github.com/Apolo0013/Enciclopedia-Negra",
+        "linkSite": "https://apolo0013.github.io/Enciclopedia-Negra/#/home/",
+        "sobreMais": {
+            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "pathImagem": []
+        }
+    },
+    {
+        "IDNAME": "TABELAPERIODICA",
+        "nomeProjeto": "Tabela Periodica",
+        "area": "FrontEnd",
+        "pathPrint": "../assets/print-projeto/print-tabela.png",
+        "tags": ["JS", "CSS", "HTML", "RC"],
+        "resumo": "Criacao de um site que cujo o objetivo é expo os elementos",
+        "linkGitHub": "https://github.com/Apolo0013/tabela-periodica",
+        "linkSite": "https://apolo0013.github.io/tabela-periodica/",
+        "sobreMais": {
+            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "pathImagem": []
+        }
+    }
+    ,
+    {
+        "IDNAME": "ENCICLOPEDIANEGRA",
+        "nomeProjeto": "Enciclopedia Negra",
+        "pathPrint": "src\\assets\\print-projeto\\print-enciclopedia-negra.png",
+        "area": "FrontEnd",
+        "tags": ["JS", "HTML", "SCSS", "CSS", "RC"],
+        "resumo": "Criacao de um site para a representacao negra",
+        "linkGitHub": "https://github.com/Apolo0013/Enciclopedia-Negra",
+        "linkSite": "https://apolo0013.github.io/Enciclopedia-Negra/#/home/",
+        "sobreMais": {
+            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "pathImagem": []
+        }
+    },
+    {
+        "IDNAME": "TABELAPERIODICA",
+        "nomeProjeto": "Tabela Periodica",
+        "area": "FrontEnd",
+        "pathPrint": "../assets/print-projeto/print-tabela.png",
+        "tags": ["JS", "CSS", "HTML", "RC"],
+        "resumo": "Criacao de um site que cujo o objetivo é expo os elementos",
+        "linkGitHub": "https://github.com/Apolo0013/tabela-periodica",
+        "linkSite": "https://apolo0013.github.io/tabela-periodica/",
+        "sobreMais": {
+            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "pathImagem": []
         }
     }
 ]

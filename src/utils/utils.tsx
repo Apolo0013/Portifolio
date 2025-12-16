@@ -1,24 +1,41 @@
 import type { Dispatch, SetStateAction } from "react"
-import type { CardsProjetoInfo } from "../type"
+import type { CardsProjetoInfo, TypetipoView} from "../type"
 
 //Observar os cards dos projetos
 //Basicamente: ele vai add
-export function UseObserverCard(Info: CardsProjetoInfo) {
+type ParamUseObserverCard = {
+    target: HTMLElement,
+    root: HTMLElement,
+    SetData: Dispatch<SetStateAction<TypetipoView>>
+}
+
+export function UseObserverCard({target, root, SetData} : ParamUseObserverCard) {
     const obs = new IntersectionObserver((entradas, _) => {
         entradas.forEach(entry => {
-            console.log(entry.intersectionRatio ? "vendo" : 'nao')
-            if (entry.isIntersecting) Info.SetData('visto') // vendo
-            else Info.SetData('nao-visto') // nao vendo
+            if (entry.isIntersecting) SetData('visto') // vendo
+            else SetData('nao-visto') // nao vendo
         })
-    })
-    const elemento = Info.el.current as Element
-    obs.observe(elemento) // observando
+    },
+        {
+            root: root,
+            threshold: 0.5 // 100% dipara
+        }
+    )
+    obs.observe(target) // observando
 }
 
 //funcao basicamente vai add aquele efeito de sujimentos
 export type typeShowOrSide = 'conteiner-show' | 'conteiner-side'
 
-export function UseObserverShow(conteiner: HTMLElement, SetClass: Dispatch<SetStateAction<typeShowOrSide>>) {
+type ParamUseObserverShow = {
+    target: HTMLElement,
+    SetClass: Dispatch<SetStateAction<typeShowOrSide>>
+}
+
+export function UseObserverShow({
+    target,
+    SetClass
+}: ParamUseObserverShow) {
     const obs = new IntersectionObserver((entradas, _) => {
         entradas.forEach(entry => { 
             //se viu, vamos exbir ele.
@@ -28,6 +45,33 @@ export function UseObserverShow(conteiner: HTMLElement, SetClass: Dispatch<SetSt
             }
         })
     })
+    obs.observe(target)
+}
 
-    obs.observe(conteiner)
+//Funcao scroll
+type ParamScrollElement = {
+    ConteinerScroll: HTMLElement | null,
+    ConteinerTarget: HTMLElement | null,
+    Eixo?: "x" | "y"
+}
+export function ScrollElement({ConteinerScroll, ConteinerTarget, Eixo = 'x'}: ParamScrollElement) {
+    if (!ConteinerScroll || !ConteinerTarget) return
+    //pegando o gap la do CSS
+    const gap: number = Number(getComputedStyle(ConteinerScroll).getPropertyValue('--gap-conteiner-scroll').replaceAll("px", ''))
+    if (Number.isNaN(gap)) return // caso de errado em transforme em number
+    if (Eixo == 'x') {
+        const offSetX: number = ConteinerTarget.offsetLeft
+        ConteinerScroll.scrollTo({
+                left: (offSetX - gap)
+                ,
+            behavior: 'smooth'
+        })
+    }
+    else {
+        //nao sera usado...
+        ConteinerScroll.scrollTo({
+            top: ConteinerTarget.offsetTop,
+            behavior: "smooth"
+        })
+    }
 }

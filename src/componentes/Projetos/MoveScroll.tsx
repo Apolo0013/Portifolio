@@ -3,7 +3,8 @@ import './MoveScroll.scss'
 import ImgSeta from '../../assets/imagens/seta.svg'
 import { type RefObject } from 'react'
 //utils
-import { findLastIndex } from '../../utils/utils'
+import { findLastIndex } from '../../utils/utils.ts'
+import { ScrollElement } from '../../utils/utils.tsx'
 
 type Props = {
     direcao: 'left' | 'right',
@@ -11,9 +12,9 @@ type Props = {
     ListaCards: RefObject<Array<HTMLDivElement | null>> // essa lista é ondem contem os cards dos projetos
 }
 
-function MoveScroll({ direcao, conteiner, ListaCards }: Props) {                        
+function MoveScroll({ direcao, conteiner, ListaCards }: Props) {                  
     //Cards pular
-    const PULARCARDS: number = 4
+    const PULARCARDS: number = 1
     //Funcao responsavel por fazer o scroll
     function Scroll() {
         if (!conteiner.current || ListaCards.current.some(el => el == null)) return // conteiner é null
@@ -42,7 +43,6 @@ function MoveScroll({ direcao, conteiner, ListaCards }: Props) {
             //se caso ele for maior ele vai se mater naquele indice, caso ao contrario ele vai somar normalmente
             indiceel = indiceultimo
             for (let i = 0; i < PULARCARDS; i++) { // aqui vamos tenta mostrar os outros que nao estao a mostrar, no max: 4(default)
-
                 if (indiceel < ListaCards.current.length) { // ainda esta dentro do indices maximo da lista
                     indiceel ++
                 }
@@ -53,19 +53,24 @@ function MoveScroll({ direcao, conteiner, ListaCards }: Props) {
         //antes de da scroll. vamos ver se o el é null
         if (!el) return
         //Scroll
+        //caso ele for o primeiro
         if (indiceel == 0) {
             conteiner.current.scrollTo({
                 left: 0,
                 behavior: 'smooth'
             })
         }   
+        //caso o proximo o scroll seja o ultimo.
         else if (indiceel + 1 == ListaCards.current.length) {
             conteiner.current.scrollTo({
                 left: conteiner.current.scrollWidth,
                 behavior: "smooth"
             })
         }
-        else el!.scrollIntoView({ behavior: "smooth", block: "center" })
+        else ScrollElement({
+            ConteinerScroll: conteiner.current as HTMLElement,
+            ConteinerTarget: el as HTMLElement
+        })
     }
 
     return (

@@ -7,9 +7,12 @@ export type sobreMaisType = {
     pathImagem: string[]
 }
 
+//IDNAME Presente no projeto
+type TypeIDNAMEJSON = "ENCICLOPEDIANEGRA" | "TABELAPERIODICA"
+
 export type ProjetoDate = {
+    IDNAME: TypeIDNAMEJSON
     nomeProjeto: string,
-    pathPrint: string,
     tags: string[],
     resumo: string,
     linkGitHub: string,
@@ -17,9 +20,9 @@ export type ProjetoDate = {
     sobreMais: sobreMaisType
 }
 //tipo dos card do projeto
-export type Typetipo = 'visto' | 'nao-visto'
+export type TypetipoView = 'visto' | 'nao-visto'
 
 export type CardsProjetoInfo = {
     el: RefObject<HTMLDivElement | null>,
-    SetData: Dispatch<SetStateAction<Typetipo>>
+    SetData: Dispatch<SetStateAction<TypetipoView>>
 }

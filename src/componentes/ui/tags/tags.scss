@@ -25,3 +25,19 @@
         }
     }
 }
+
+//Responsividade
+//aqui vamos diretoapra o dispositivo moveis
+//largura <= 500px
+@media (max-width: 500px) and (pointer: coarse){
+    .conteiner-tags > .conteiner-tag-img {
+        height: rem(50);
+    }
+}
+//largura <= 400px
+@media (max-width: 400px) and (pointer: coarse) {
+    .conteiner-tags > .conteiner-tag-img {
+        height: rem(40);
+    }
+}
+

@@ -13,7 +13,10 @@ function Show_Conteiner({ children }: { children: React.ReactNode }) {
     const RefConteinerMain = useRef<HTMLElement | null>(null)
     useEffect(() => {
         if (!RefConteinerMain.current) return // caso for null
-        UseObserverShow(RefConteinerMain.current, SetObsClass) // observa...
+        UseObserverShow({
+            target: RefConteinerMain.current,
+            SetClass: SetObsClass
+        }) // observa...
     }, [])
     return (
         <main className={"wraper-show-conteiner" + " " + StateObsClass} ref={RefConteinerMain}>
