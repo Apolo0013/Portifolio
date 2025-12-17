@@ -21,7 +21,7 @@ function Contato({ GetRef }: { GetRef: RefObject<HTMLElement | null>}) {
                     <a href="https://www.linkedin.com/in/apolonio-guilherme-11a825322/" className="link-contato">
                         <img src={LKIMG} alt="Imagem do LinkDin" />
                     </a>
-                    <a href="mailto:apolonbio913@gmail.com?subject=Contato%20Portfólio&body=Vi%20seu%20portfólio%20e%20gostaria%20de%20falar%20com%20você." className="link-contato">
+                    <a href="mailto:apolonbio913@gmail.com?subject=Contato%20Portfólio de Apolonio Guilherme&body=Vi%20seu%20portfólio%20e%20gostaria%20de%20falar%20com%20você." className="link-contato">
                         <img src={EmailIMG} alt="Imagem do Email" />
                     </a>
                     <a href="https://github.com/Apolo0013" className="link-contato">

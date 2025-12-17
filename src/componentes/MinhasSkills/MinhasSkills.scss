@@ -4,7 +4,6 @@
     flex-direction: column;
     gap: rem(40);
 
-    * {border: 1px solid red;}
     
     .conteiner-habilidades {
         display: flex;
@@ -16,6 +15,7 @@
             flex-direction: row;
             width: 50%;
             height: rem(100);
+            gap: rem(15);
 
             .skill-sobre-text {
                 display: flex;

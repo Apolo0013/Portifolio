@@ -27,3 +27,19 @@
         }
     }
 }
+
+//Responsividade
+//largunra <= 600px
+@media (max-width: 600px) {
+    .conteiner-contato > .conteiner-icone-link {
+        height: rem(60);
+    }
+}
+
+//Responsividade para dispositivos moveis
+//largura <= 400px
+@media (max-width: 400px) and (pointer: coarse) {
+    .conteiner-contato > .conteiner-icone-link {
+        height: rem(55);
+    }
+}
