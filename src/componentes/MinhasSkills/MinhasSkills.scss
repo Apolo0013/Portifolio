@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: rem(40);
 
+    * {border: 1px solid red;}
     
     .conteiner-habilidades {
         display: flex;
@@ -14,7 +15,7 @@
             display: flex;
             flex-direction: row;
             width: 50%;
-            height: rem(80);
+            height: rem(100);
 
             .skill-sobre-text {
                 display: flex;
@@ -28,15 +29,14 @@
 
             .skill-sobre-img-tag {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: center;
-                height: 100%;
                 height: 100%;
                 width: 20%;
 
                 img {
                     aspect-ratio: 1 / 1;
-                    height: 100%;
+                    height: rem(80);
                     object-fit: cover;
                     opacity: 0.5;
                 }
@@ -44,3 +44,26 @@
         }
     }
 }
+
+//Responsividade
+//largura <= 1000px
+@media (max-width: 1000px) {
+    .conteiter-minhas-habilidade > .conteiner-habilidades > .skill-sobre {
+        width: 70% !important;
+    }   
+}
+
+@media (max-width: 700px) {
+    .conteiter-minhas-habilidade {
+        gap: rem(20) !important;
+
+        .conteiner-habilidades > .skill-sobre {
+            width: 100% !important;
+            .skill-sobre-img-tag > img {
+                height: rem(70);
+            }
+        }
+    }
+}
+
+//Dispositivos Moveis, Nao vi necessidade de fazer.
