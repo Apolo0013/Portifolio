@@ -9,6 +9,7 @@ import MinhasSkills from './componentes/MinhasSkills/MinhasSkills'
 import Contato from './componentes/Contato/Contato'
 //Contexto
 import { UseGlobal } from './Context/ProviderContext'
+import VerImagem from './componentes/ui/ver-imagem/Ver-Imagem'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
     }, [])
     return (
         <div className="App">
+            <VerImagem />
             <Cabeca RefConteiner={{contato: RefContato, projeto: RefProjetos}}/>
             <Sobre />
             <Projetos GetRef={RefProjetos} />

@@ -54,11 +54,19 @@
     .h1-main {
         font-size: rem(38);
     }
+
+    .h2-main {
+        font-size: rem(28);
+    }
 }
 
 @media (max-width: 700px) {
     .h1-main {
         font-size: rem(35);
+    }
+
+    .h2-main {
+        font-size: rem(25);
     }
 }
 
@@ -68,10 +76,15 @@
         font-size: rem(30);
     }
 
+    .h2-main {
+        font-size: rem(23);
+    }
+
     .p-main {
         font-size: rem(15);
     }
 }
+
 //////////////////////////////////////////////////////////////////////
 
 //Essas class vao trabalhar com funcao UseObserverShow no utils.tsx

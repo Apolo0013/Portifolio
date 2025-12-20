@@ -22,6 +22,7 @@ function Info_Projetos({ info }: { info: ProjetoDate }) {
             }}>
                 <img src={BackIMG} alt="Voltar" />
             </div>
+            
             {/*Essa sessao é ondem vai fica os pequeno resumo do projeto ex: tecnologia usadas, resumo escrito dele, titulo e uma foto a direita.*/}
             <section className="conteiner-info-projeto-info-comum">
                 <div className="conteiner-info-comum-escrito">

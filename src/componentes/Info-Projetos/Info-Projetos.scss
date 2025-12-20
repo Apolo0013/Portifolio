@@ -145,3 +145,37 @@
         }
     }
 }
+
+//Responsividadede
+//largura <= 1200px 
+@media (max-width: 1200px) {
+    .botao-link {
+        width: 40% !important;
+    }
+}
+
+//largura <= 900px
+//Aqui vamos retirar .print-start-info-comum
+@media (max-width: 900px) {
+    .wraper-conteiner-main-info-projeto > .conteiner-info-projeto-info-comum {
+        .conteiner-info-comum-escrito {width: 100%;}
+        .print-start-info-comum {display: none;}
+    }
+}
+
+//largura <= 700px
+@media (max-width: 700px) {
+    .botao-link {width: 60% !important;}
+}
+
+
+//Responsivadade para dispositivos moveis
+//largura 400px\
+@media (max-width: 500px) and (pointer: coarse) {
+    .botao-link {width: 70% !important;}
+}
+
+//largura <= 400px
+@media (max-width: 400px) and (pointer: coarse) {
+    .botao-link {width: 100% !important;}
+}
