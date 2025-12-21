@@ -99,7 +99,7 @@ function useModal(): ReturnUseModal {
     const [StateVarHandler, SetVarHandler] = useState<TypeVarHandler>({
         posicaoAtual: { x: 0, y: 0 },
         posicaoLast: { x: 0, y: 0 },
-        zoomactive: true,
+        zoomactive: false,
         press: false
     })
     //

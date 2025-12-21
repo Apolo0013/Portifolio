@@ -19,54 +19,11 @@
         word-break: break-word;
     }
 
-    .conteiner-info-projeto-sobre-mais-imagens {
-        user-select: none;
-        background: rgba(255, 255, 255, 0.327);
-        padding: rem(5);
-        width: 100%;
-        height: rem(460);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: rem(0);
-
-        .conteiner-passa-imagem {
-            aspect-ratio: 1 / 1;
-            height: 15%;
-            border-radius: 40%;
-            background: $fundo;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 0.2s ease;
-            cursor: pointer;
-
-            &:hover {
-                transform: scale(0.99);
-                background: $hover-botaolink;
-                animation: treme 0.1s ease-in infinite forwards;
-
-                @keyframes treme {
-                    50% {transform: rotate(-2deg);}
-                    100% {transform: rotate(2deg);}
-                }
-            }
-
-            img {
-                object-fit: contain;
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        img {
-            width: 80%;
-            height: 100%;
-            object-fit: contain;
-        }
-    }
 }
 
-//Responsividade
-//largura <= 1260px
-@media (max-width: 1260px) {}
+//responsividade
+@media (max-width: 800px) {
+    .conteiner-info-projeto-sobre-mais > .p-sobre-mais {
+        width: 100% !important;
+    }
+}

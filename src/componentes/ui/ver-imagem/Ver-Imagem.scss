@@ -7,6 +7,7 @@ $fundo-vi: #0f0f0f73;
     left: 0;
     top: 0;
     position: absolute;
+    z-index: 100000;
     backdrop-filter: blur(5px);
     background: $fundo-vi;
     width: 100%;
@@ -26,6 +27,7 @@ $fundo-vi: #0f0f0f73;
         position: relative;
         width: auto;
         height: 90%;
+        box-shadow: 0 0 10px 0 white;
 
         .imagem-ver {
             width: 100%;    

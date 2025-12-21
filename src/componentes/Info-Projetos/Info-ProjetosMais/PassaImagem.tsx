@@ -9,7 +9,7 @@ type PropsPassaImagem = {
 
 function PassaImagem({ direcao, onClick}: PropsPassaImagem ) {
     return (
-        <div className='conteiner-passa-imagem' onClick={() => onClick(direcao)}>
+        <div className='botao-passa-imagem' onClick={() => onClick(direcao)}>
             <img src={SetaIMG} alt="Imagem deu certa"
                 style={{
                     transform: `rotate(${direcao == 'right' ? '-180deg' : '0deg'})`

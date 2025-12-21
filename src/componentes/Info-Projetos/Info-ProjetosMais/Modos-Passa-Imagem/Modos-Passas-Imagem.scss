@@ -1,0 +1,116 @@
+@use '../../../../utils/utils.scss' as *;
+
+.conteiner-info-projeto-sobre-mais-imagens-coluna, .conteiner-info-projeto-sobre-mais-imagens-inline {
+    display: flex;
+    user-select: none;
+    background: rgba(255, 255, 255, 0.327);
+    padding: rem(5);
+
+    .botao-passa-imagem {
+        aspect-ratio: 1 / 1;
+        height: 15%;
+        border-radius: 40%;
+        background: $fundo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(0.99);
+            background: $hover-botaolink;
+            animation: treme 0.1s ease-in infinite forwards;
+
+            @keyframes treme {
+                50% {transform: rotate(-2deg);}
+                100% {transform: rotate(2deg);}
+            }
+        }
+
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .imagem-sobre-projeto {
+        cursor: pointer;
+        object-fit: contain;
+    }
+}
+
+//Modo Coluna
+.conteiner-info-projeto-sobre-mais-imagens-coluna {
+    align-items: center;
+    flex-direction: column;
+    gap: rem(10);
+
+    .imagem-sobre-projeto {
+        width: 95%;
+    }
+
+    .conteiner-botao-passa-imagem {
+        gap: rem(50);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: rem(80);
+
+        .botao-passa-imagem {
+            height: 100% !important ;
+        }
+    }
+}
+
+//Modo Inline
+.conteiner-info-projeto-sobre-mais-imagens-inline {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: rem(460);
+    gap: rem(15);
+
+    .imagem-sobre-projeto {
+        width: 80%;
+        height: 100%;
+    }
+}
+
+
+//Responsividade
+//largura <= 1000px
+@media (max-width: 1000px) {
+    .conteiner-info-projeto-sobre-mais-imagens-coluna, .conteiner-info-projeto-sobre-mais-imagens-inline {
+        gap: rem(5);
+
+        .conteiner-passa-imagem {
+            height: 13% !important;
+        }
+    }
+}
+
+//largura <= 750px
+@media (max-width: 750px) {
+    .conteiner-info-projeto-sobre-mais-imagens-coluna {
+        .conteiner-botao-passa-imagem {
+            height: rem(70);
+        }
+    }
+}
+
+//largura <= 600px
+@media (max-width: 600px) {
+    .conteiner-botao-passa-imagem {
+        height: rem(60) !important;
+    }
+}
+
+//Responsiviade para dispositivos moveis
+@media (max-width: 500px) and (pointer: coarse) {
+    .conteiner-botao-passa-imagem {
+        height: rem(45) !important;
+    }
+}

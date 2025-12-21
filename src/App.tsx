@@ -9,8 +9,8 @@ import MinhasSkills from './componentes/MinhasSkills/MinhasSkills'
 import Contato from './componentes/Contato/Contato'
 //Contexto
 import { UseGlobal } from './Context/ProviderContext'
-import VerImagem from './componentes/ui/ver-imagem/Ver-Imagem'
 
+import t from './assets/print-projeto/Enciclopedia-Negra/imagem1.jpg'
 
 function App() {
     //Referencia dos componentes
@@ -20,10 +20,10 @@ function App() {
     const global = UseGlobal()!
     useEffect(() => {
         if (!global) return // caso ele seja null
+        //global.StateVerImagem({show: true, src: t})
     }, [])
     return (
         <div className="App">
-            <VerImagem />
             <Cabeca RefConteiner={{contato: RefContato, projeto: RefProjetos}}/>
             <Sobre />
             <Projetos GetRef={RefProjetos} />
