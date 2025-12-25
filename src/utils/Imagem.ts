@@ -27,6 +27,18 @@ import EN_SoreMaisIMG1 from '../assets/print-projeto/Enciclopedia-Negra/imagem1.
 import EN_SoreMaisIMG2 from '../assets/print-projeto/Enciclopedia-Negra/imagem2.jpg'
 import EN_SoreMaisIMG3 from '../assets/print-projeto/Enciclopedia-Negra/imagem3.jpg'
 import EN_SoreMaisIMG4 from '../assets/print-projeto/Enciclopedia-Negra/imagem4.jpg'
+//Quiz React
+import QR_PrintCardImg from '../assets/print-projeto/Quiz-React/print-projeto.jpg'
+import QR_SobreMaisIMG1 from '../assets/print-projeto/Quiz-React/imagem1.jpg'
+import QR_SobreMaisIMG2 from '../assets/print-projeto/Quiz-React/imagem2.jpg'
+import QR_SobreMaisIMG3 from '../assets/print-projeto/Quiz-React/imagem3.jpg'
+import QR_SobreMaisIMG4 from '../assets/print-projeto/Quiz-React/imagem4.jpg'
+import QR_SobreMaisIMG5 from '../assets/print-projeto/Quiz-React/imagem5.jpg'
+//Youtube DownLoad
+import YD_PrintCardImg from '../assets/print-projeto/YouTube-DowLoad/print-projeto.jpg'
+import YD_SobreMaisIMG1 from '../assets/print-projeto/YouTube-DowLoad/imagem1.jpg'
+import YD_SobreMaisIMG2 from '../assets/print-projeto/YouTube-DowLoad/imagem2.jpg'
+import YD_SobreMaisIMG3 from '../assets/print-projeto/YouTube-DowLoad/imagem3.jpg'
 
 
 //PATH dos icone/tag
@@ -63,7 +75,9 @@ type TypePATHImagemProjeto = {
 
 type TypeProjetoImagens = {
     ENCICLOPEDIANEGRA: TypePATHImagemProjeto,
-    TABELAPERIODICA: TypePATHImagemProjeto
+    TABELAPERIODICA: TypePATHImagemProjeto,
+    QUIZREACT: TypePATHImagemProjeto,
+    YOUTUBEWEBDOWNLOAD: TypePATHImagemProjeto
 }
 
 export const PathImagemProjeto: TypeProjetoImagens = {
@@ -81,6 +95,24 @@ export const PathImagemProjeto: TypeProjetoImagens = {
         SobreMaisImagens: [
             TP_SobreMaisIMG1,
             TP_SobreMaisIMG2
+        ]
+    },
+    QUIZREACT: {
+        PrintProjetoCard: QR_PrintCardImg,
+        SobreMaisImagens: [
+            QR_SobreMaisIMG1,
+            QR_SobreMaisIMG2,
+            QR_SobreMaisIMG3,
+            QR_SobreMaisIMG4,
+            QR_SobreMaisIMG5
+        ]
+    },
+    YOUTUBEWEBDOWNLOAD: {
+        PrintProjetoCard: YD_PrintCardImg,
+        SobreMaisImagens: [
+            YD_SobreMaisIMG1,
+            YD_SobreMaisIMG2,
+            YD_SobreMaisIMG3
         ]
     }
 }

@@ -1,5 +1,6 @@
 import { createContext, type Dispatch, type SetStateAction } from "react";
 import type { ProjetoDate } from "../type";
+import type { Linguagens, LinguagensDisponivel} from "../date/linguagem/linguagem";
 
 //Types
 //Type para o Componente Mostrar informcao projeto
@@ -14,7 +15,10 @@ export type StateVerImagem = {
 }
 export type TypeContextGlobal = {
     StateSetInfoProjeto: Dispatch<SetStateAction<StateShowInfoProjeto>>,
-    StateVerImagem: Dispatch<SetStateAction<StateVerImagem>>
+    StateVerImagem: Dispatch<SetStateAction<StateVerImagem>>,
+    Linguas: Linguagens,
+    LinguaAtual: LinguagensDisponivel,
+    SetLinguaAtual: Dispatch<SetStateAction<LinguagensDisponivel>>
 }
 
 export const ContextGlobal = createContext<TypeContextGlobal | null>(null)

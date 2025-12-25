@@ -1,0 +1,42 @@
+{
+    "cabeca": {
+        "fraseCurta": "Desenvolvedor Front-End focado em React/JS",
+        "botoesRapido": {
+            "projeto": "Projetos",
+            "contato": "Contato"
+        }
+    },
+    "sobreMim": {
+        "tituloMain": "Sobre mim",
+        "textoSobre": "Sou desenvolvedor Front-End com experiência em JavaScript e TypeScript, criando interfaces rápidas e objetivas. Trabalho com React e foco em clareza, desempenho e código limpo. Gosto de resolver problemas de forma simples e prática, sempre buscando melhorar. Estou aberto a oportunidades para atuar em projetos reais e entregar resultado de verdade."
+    },
+    "projeto": {
+        "tituloMain": "Projetos",
+        "Card": {
+            "resumo": "Resumo",
+            "tags": "Tags"
+        }
+    },
+    "projetoInfo": {
+        "resumoProjeto": "Resumo do projeto",
+        "linkGitHub": {
+            "tituloMain": "Link para o GitHub",
+            "texto": "Link para o GitHub"
+        },
+        "linkSite": {
+            "tituloMain" :"Link para o Site",
+            "texto": "Link para o Site"
+        },
+        "tecnologiaLinguagem": "Tecnologias e Linguagens Utilizadas"
+    },
+    "projetoInfoMais": {
+        "tituloMain": "Sobre Mais"
+    },
+    "minhaSkills": { 
+        "tituloMain": "Minhas Habilidades"
+    },
+    "contato": {
+        "tituloMain": "Contato",
+        "texto": "Quer falar comigo? Me chama por qualquer canal abaixo."
+    }
+}

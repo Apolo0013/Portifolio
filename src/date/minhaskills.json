@@ -1,47 +1,81 @@
-[
-    {
-        "title": "React",
-        "text": "hooks, controle de estado, composição de componentes, renderização condicional",
-        "tag": "RC"
+{
+    "tituloMain": {
+        "ingles": "My Skills",
+        "brasil": "Minhas Habilidades"
     },
-    {
-        "title": "TypeScript",
-        "text": "tipagem estática, interfaces, types, segurança em componentes e funções",
-        "tag": "TS"
-    },
-    {
-        "title": "JavaScript",
-        "text": "lógica de programação, array methods, async/await, closures",
-        "tag": "JS"
-    },
-    {
-        "title": "CSS",
-        "text": "Flexbox, Grid, responsividade, organização de estilos, animações básicas",
-        "tag": "CSS"
-    },
-    {
-        "title": "HTML",
-        "text": "estrutura semântica, acessibilidade básica, boas práticas",
-        "tag": "HTML"
-    },
-    {
-        "title": "APIs",
-        "text": "consumo de APIs REST, fetch/axios, tratamento de erros, estados de loading",
-        "tag": "API"
-    },
-    {
-        "title": "Python",
-        "text": "lógica, scripts simples, manipulação de dados",
-        "tag": "PY"
-    },
-    {
-        "title": "C#",
-        "text": "POO, lógica de backend, estruturação de projetos",
-        "tag": "CS"
-    },
-    {
-        "title": "Ferramentas",
-        "text": "Git, GitHub, ESLint, Vite, organização de projetos",
-        "tag": "FR"
-    }
-]
+    "skills":[
+        {
+            "title": "React",
+            "text": {
+            "brasil": "hooks, controle de estado, composição de componentes, renderização condicional",
+            "ingles": "hooks, state management, component composition, conditional rendering"
+            },
+            "tag": "RC"
+        },
+        {
+            "title": "TypeScript",
+            "text": {
+            "brasil": "tipagem estática, interfaces, types, segurança em componentes e funções",
+            "ingles": "static typing, interfaces, types, safety in components and functions"
+            },
+            "tag": "TS"
+        },
+        {
+            "title": "JavaScript",
+            "text": {
+            "brasil": "lógica de programação, array methods, async/await, closures",
+            "ingles": "programming logic, array methods, async/await, closures"
+            },
+            "tag": "JS"
+        },
+        {
+            "title": "CSS",
+            "text": {
+            "brasil": "Flexbox, Grid, responsividade, organização de estilos, animações básicas",
+            "ingles": "Flexbox, Grid, responsiveness, style organization, basic animations"
+            },
+            "tag": "CSS"
+        },
+        {
+            "title": "HTML",
+            "text": {
+            "brasil": "estrutura semântica, acessibilidade básica, boas práticas",
+            "ingles": "semantic structure, basic accessibility, best practices"
+            },
+            "tag": "HTML"
+        },
+        {
+            "title": "APIs",
+            "text": {
+            "brasil": "consumo de APIs REST, fetch/axios, tratamento de erros, estados de loading",
+            "ingles": "REST API consumption, fetch/axios, error handling, loading states"
+            },
+            "tag": "API"
+        },
+        {
+            "title": "Python",
+            "text": {
+            "brasil": "lógica, scripts simples, manipulação de dados",
+            "ingles": "logic, simple scripts, data manipulation"
+            },
+            "tag": "PY"
+        },
+        {
+            "title": "C#",
+            "text": {
+            "brasil": "POO, lógica de backend, estruturação de projetos",
+            "ingles": "OOP, backend logic, project structuring"
+            },
+            "tag": "CS"
+        },
+        {
+            "title": "Ferramentas",
+            "text": {
+            "brasil": "Git, GitHub, ESLint, Vite, organização de projetos",
+            "ingles": "Git, GitHub, ESLint, Vite, project organization"
+            },
+            "tag": "FR"
+        }
+        ]
+
+}

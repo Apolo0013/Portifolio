@@ -5,6 +5,20 @@
     height: auto;
     display: flex;
     justify-content: center;
+    position: relative;
+
+    .back-circle {
+        position: absolute;
+        left: -20%;
+        top: -20%;
+        filter: blur(100px);
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgb(39, 154, 241);
+        box-shadow: 0 0 20px 0 rgb(39, 154, 241);
+    }
+    
 
     * {
         font-family: 'Roboto', Arial, Helvetica, sans-serif;

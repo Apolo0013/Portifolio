@@ -10,8 +10,14 @@ import projetos from '../../date/projetos.json'
 import type { ProjetoDate } from '../../type'
 import { UseGlobal } from '../../Context/ProviderContext'
 import Show_Conteiner from '../ui/show-conteiner/show-conteiner'
+import type { JSONLinguagemProjeto } from '../../date/linguagem/linguagem'
 
-function Projetos({GetRef}: {GetRef: RefObject<HTMLElement | null>}) {
+type Props = {
+    GetRef: RefObject<HTMLElement | null>,
+    Lingua: JSONLinguagemProjeto | null
+}
+
+function Projetos({GetRef, Lingua}: Props) {
     //Funcao que vai add os cards no State
     function AddCardsStateProjeto() {
         const listatempoElemento: JSX.Element[] = [] // lista temporaria
@@ -20,7 +26,7 @@ function Projetos({GetRef}: {GetRef: RefObject<HTMLElement | null>}) {
         //Conteundo
         const conteudo = projetos as ProjetoDate[]
         for (const info of conteudo) {
-            //add na lista temporia
+            //add na lista temporaria
             listatempoElemento.push(
                 <Card
                     //heranca
@@ -35,12 +41,12 @@ function Projetos({GetRef}: {GetRef: RefObject<HTMLElement | null>}) {
                     RefConteinerScroll={RefConteinerCardsScroll}
                     GetRef={RefConteinerCardsProjetos} // esse GetRef ai pegar a referencia do conteinero wraper lado dos cards
                     onClick={(): void => {
-                        console.log(info)
                         global.StateSetInfoProjeto({
                             show: true,
                             info: info
                         })
                     }}
+                    //Key
                     key={key}
                     />
                 )
@@ -59,13 +65,15 @@ function Projetos({GetRef}: {GetRef: RefObject<HTMLElement | null>}) {
     const RefConteinerCardsScroll = useRef<HTMLDivElement>(null)
     //Referencia dos conteiner cards projetos
     const RefConteinerCardsProjetos = useRef<Array<HTMLDivElement | null>>([])
+
+    console.log(Lingua)
     useEffect(() => {
         AddCardsStateProjeto()
     }, [])
     return (
         <Show_Conteiner>
             <section className="sessao-corpo conteiner-projetos" ref={GetRef}>
-                <h1 className="h1-main">Projetos</h1>
+                <h1 className="h1-main">{Lingua ? Lingua.tituloMain : ""}</h1>
                 <div className='wraper-conteiner-cards'>
                     <MoveScroll direcao="left" conteiner={RefConteinerCardsScroll} ListaCards={RefConteinerCardsProjetos}/> {/*Controlado do scroll*/}
                     <div className="conteiner-cards-scroll" ref={RefConteinerCardsScroll}>

@@ -1,6 +1,6 @@
 //Type
 import { useEffect, useRef, useState, type RefObject } from 'react'
-import type { ProjetoDate, Typetipo } from '../../type'
+import type { ProjetoDate , TypetipoView} from '../../type'
 //SCSS
 import './Card.scss'
 //Utils
@@ -9,20 +9,45 @@ import { UseObserverCard } from '../../utils/utils.tsx'
 import TagsInline from '../ui/tags/tags.tsx'
 //Imagens
 import { PathImagemProjeto } from '../../utils/Imagem.ts'
+import { UseGlobal } from '../../Context/ProviderContext.tsx'
 
 //PropsCard: type para os props do Card
 interface PropsCard extends ProjetoDate { // vou herda os tipo do ProjetoDate
     GetRef: RefObject<Array<HTMLDivElement | null>>,
     onClick: () => void,
-    RefConteinerScroll: RefObject<HTMLElement | null> // esse conteiner é o carinha que sera usado para manipular o scroll
+    RefConteinerScroll: RefObject<HTMLElement | null>, // esse conteiner é o carinha que sera usado para manipular o scroll
 }
 
 
-function Card({ nomeProjeto, resumo, tags, IDNAME ,onClick, GetRef, RefConteinerScroll}: PropsCard ) {
+function Card({
+    nomeProjeto,
+    resumo,
+    tags,
+    IDNAME,
+    onClick,
+    GetRef,
+    RefConteinerScroll,
+}: PropsCard) {
     //State do data set dele
-    const [StateDataSet, SetDataSet] = useState<Typetipo>('nao-visto')
+    const [StateDataSet, SetDataSet] = useState<TypetipoView>('nao-visto')
     //Referncia ao conteiner
     const RefConteiner = useRef<HTMLDivElement | null>(null)
+    //Global contexto
+    const global = UseGlobal()!
+    //Lingua, vai se servido como wraper
+    type CardLingua = {
+        resumo: string,
+        tags: string
+    }
+    const [Lingua, SetLingua] = useState<CardLingua>({
+        resumo: "",
+        tags: ""
+    })
+    useEffect(() => {
+        if (global.Linguas)
+        SetLingua(global.Linguas[global.LinguaAtual].projeto.Card)
+    }, [global.LinguaAtual])
+
     useEffect(() => {
         if (!RefConteiner.current || !RefConteinerScroll.current) return
         //Pegando a referncia...
@@ -49,11 +74,11 @@ function Card({ nomeProjeto, resumo, tags, IDNAME ,onClick, GetRef, RefConteiner
                         {nomeProjeto}
                     </h1>
                     <span className='card-info-projeto-text'>
-                        <h3 className='card-info-projeto-text-h3'>Resumo</h3>
-                        <p className='card-info-projeto-text-p'>{resumo}</p>
+                        <h3 className='card-info-projeto-text-h3'>{Lingua.resumo}</h3>
+                        <p className='card-info-projeto-text-p'>{resumo[global.LinguaAtual]}</p>
                     </span>
                     <span className='card-info-projeto-text'>
-                        <h3 className="card-info-projeto-h3">Tags</h3>
+                        <h3 className="card-info-projeto-h3">{Lingua.tags}</h3>
                         <TagsInline listatag={tags}/>
                     </span>
                 </div>

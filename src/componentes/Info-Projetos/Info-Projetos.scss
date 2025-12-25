@@ -1,6 +1,7 @@
 @use '../../utils/utils.scss' as *;
 
 .wraper-conteiner-main-info-projeto {
+    overflow-x: hidden;
     overflow-y: auto;
     width: 100%;
     height: 100%;
@@ -140,9 +141,18 @@
             padding: rem(5);
             margin: rem(20) rem(20) 0 0;
             aspect-ratio: 3 / 4;
-            width: 30%;
-            height: auto;
+            height: 100%;
         }
+    }
+}
+
+.link-indisponivel {
+    filter: grayscale(100%) !important;
+    cursor: not-allowed !important;
+
+    &:hover {
+        transform: none !important;
+        background: $fundo !important;
     }
 }
 

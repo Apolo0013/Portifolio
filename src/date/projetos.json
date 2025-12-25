@@ -5,11 +5,17 @@
         "pathPrint": "src\\assets\\print-projeto\\print-enciclopedia-negra.png",
         "area": "FrontEnd",
         "tags": ["JS", "HTML", "SCSS", "CSS", "RC"],
-        "resumo": "Criacao de um site para a representacao negra",
+        "resumo": {
+            "brasil":"Site informativo voltado à valorização da cultura e da história negra.",
+            "ingles": "Informative website about promoting Black culture and history."
+        },
         "linkGitHub": "https://github.com/Apolo0013/Enciclopedia-Negra",
         "linkSite": "https://apolo0013.github.io/Enciclopedia-Negra/#/home/",
         "sobreMais": {
-            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "texto": {
+                "brasil": "O projeto Enciclopédia Negra foi criado com o objetivo de reunir e apresentar informações relevantes sobre a cultura, a história e personalidades negras. A aplicação busca oferecer uma experiência clara e organizada, utilizando tecnologias web para facilitar o acesso ao conteúdo e promover a conscientização por meio da informação.",
+                "ingles": "The Enciclopedia Negra project was created with the goal of gathering and presenting relevant information about Black culture, history, and personalities. The application aims to offer a clear and organized experience, using web technologies to facilitate access to content and promote awareness through information."
+            },
             "pathImagem": []
         }
     },
@@ -19,126 +25,57 @@
         "area": "FrontEnd",
         "pathPrint": "../assets/print-projeto/print-tabela.png",
         "tags": ["JS", "CSS", "HTML", "RC"],
-        "resumo": "Criacao de um site que cujo o objetivo é expo os elementos",
+        "resumo": {
+            "ingles":"A website that allows you to download videos or audio from YouTube links.",
+            "brasil": "Site interativo para visualizar e estudar os elementos da tabela periódica."
+        },
         "linkGitHub": "https://github.com/Apolo0013/tabela-periodica",
         "linkSite": "https://apolo0013.github.io/tabela-periodica/",
         "sobreMais": {
-            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "texto": {
+                "brasil": "O projeto Tabela Periódica tem como finalidade expor os elementos químicos de maneira organizada e intuitiva. A aplicação foi desenvolvida para auxiliar no aprendizado, oferecendo uma visualização clara das informações e uma navegação simples, tornando o estudo mais acessível.",
+                "ingles": "The Periodic Table project aims to present chemical elements in an organized and intuitive way. The application was developed to aid learning, offering a clear visualization of information and simple navigation, making study more accessible."
+            },
             "pathImagem": []
         }
     },
     {
-        "IDNAME": "ENCICLOPEDIANEGRA",
-        "nomeProjeto": "Enciclopedia Negra",
-        "pathPrint": "src\\assets\\print-projeto\\print-enciclopedia-negra.png",
-        "area": "FrontEnd",
-        "tags": ["JS", "HTML", "SCSS", "CSS", "RC"],
-        "resumo": "Criacao de um site para a representacao negra",
-        "linkGitHub": "https://github.com/Apolo0013/Enciclopedia-Negra",
-        "linkSite": "https://apolo0013.github.io/Enciclopedia-Negra/#/home/",
-        "sobreMais": {
-            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-            "pathImagem": []
-        }
-    },
-    {
-        "IDNAME": "TABELAPERIODICA",
-        "nomeProjeto": "Tabela Periodica",
+        "IDNAME": "QUIZREACT",
+        "nomeProjeto": "Quiz",
         "area": "FrontEnd",
         "pathPrint": "../assets/print-projeto/print-tabela.png",
-        "tags": ["JS", "CSS", "HTML", "RC"],
-        "resumo": "Criacao de um site que cujo o objetivo é expo os elementos",
-        "linkGitHub": "https://github.com/Apolo0013/tabela-periodica",
-        "linkSite": "https://apolo0013.github.io/tabela-periodica/",
+        "tags": ["JS", "CSS", "HTML", "RC", "TS", "CS", "API"],
+        "resumo": {
+            "brasil": "Site de quizzes desenvolvido em React com vários temas.",
+            "ingles": "Quiz website developed in React with multiple themes."
+        },
+        "linkGitHub": "https://github.com/Apolo0013/quiz-com-react-sistema-login",
+        "linkSite": null,
         "sobreMais": {
-            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-            "pathImagem": []
-        }
-    }
-    ,
-    {
-        "IDNAME": "ENCICLOPEDIANEGRA",
-        "nomeProjeto": "Enciclopedia Negra",
-        "pathPrint": "src\\assets\\print-projeto\\print-enciclopedia-negra.png",
-        "area": "FrontEnd",
-        "tags": ["JS", "HTML", "SCSS", "CSS", "RC"],
-        "resumo": "Criacao de um site para a representacao negra",
-        "linkGitHub": "https://github.com/Apolo0013/Enciclopedia-Negra",
-        "linkSite": "https://apolo0013.github.io/Enciclopedia-Negra/#/home/",
-        "sobreMais": {
-            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "texto": {
+                "brasil": "O Quiz React é uma aplicação desenvolvida em React com o objetivo de testar conhecimentos em diferentes áreas, como lógica, história e matemática. O projeto oferece uma experiência interativa, com perguntas organizadas por temas, feedback imediato e navegação simples, focando na usabilidade e clareza da interface.",
+                "ingles": "Quiz React is an application developed in React with the goal of testing knowledge in different areas, such as logic, history, and mathematics. The project offers an interactive experience, with questions organized by topic, immediate feedback, and simple navigation, focusing on usability and clarity of the interface."
+            },
             "pathImagem": []
         }
     },
     {
-        "IDNAME": "TABELAPERIODICA",
-        "nomeProjeto": "Tabela Periodica",
+        "IDNAME": "YOUTUBEWEBDOWNLOAD",
+        "nomeProjeto": "YouTube DownLoad",
         "area": "FrontEnd",
         "pathPrint": "../assets/print-projeto/print-tabela.png",
-        "tags": ["JS", "CSS", "HTML", "RC"],
-        "resumo": "Criacao de um site que cujo o objetivo é expo os elementos",
-        "linkGitHub": "https://github.com/Apolo0013/tabela-periodica",
-        "linkSite": "https://apolo0013.github.io/tabela-periodica/",
+        "tags": ["JS", "CSS", "HTML", "RC", "TS", "CS", "API"],
+        "resumo": {
+            "brasil": "Site que permite baixar vídeos ou áudios a partir de links do YouTube.",
+            "ingles": "A website that allows you to download videos or audio from YouTube links."
+        },
+        "linkGitHub": "https://github.com/Apolo0013/youtube-download-website",
+        "linkSite": null,
         "sobreMais": {
-            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-            "pathImagem": []
-        }
-    }
-    ,
-    {
-        "IDNAME": "ENCICLOPEDIANEGRA",
-        "nomeProjeto": "Enciclopedia Negra",
-        "pathPrint": "src\\assets\\print-projeto\\print-enciclopedia-negra.png",
-        "area": "FrontEnd",
-        "tags": ["JS", "HTML", "SCSS", "CSS", "RC"],
-        "resumo": "Criacao de um site para a representacao negra",
-        "linkGitHub": "https://github.com/Apolo0013/Enciclopedia-Negra",
-        "linkSite": "https://apolo0013.github.io/Enciclopedia-Negra/#/home/",
-        "sobreMais": {
-            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-            "pathImagem": []
-        }
-    },
-    {
-        "IDNAME": "TABELAPERIODICA",
-        "nomeProjeto": "Tabela Periodica",
-        "area": "FrontEnd",
-        "pathPrint": "../assets/print-projeto/print-tabela.png",
-        "tags": ["JS", "CSS", "HTML", "RC"],
-        "resumo": "Criacao de um site que cujo o objetivo é expo os elementos",
-        "linkGitHub": "https://github.com/Apolo0013/tabela-periodica",
-        "linkSite": "https://apolo0013.github.io/tabela-periodica/",
-        "sobreMais": {
-            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-            "pathImagem": []
-        }
-    }
-    ,
-    {
-        "IDNAME": "ENCICLOPEDIANEGRA",
-        "nomeProjeto": "Enciclopedia Negra",
-        "pathPrint": "src\\assets\\print-projeto\\print-enciclopedia-negra.png",
-        "area": "FrontEnd",
-        "tags": ["JS", "HTML", "SCSS", "CSS", "RC"],
-        "resumo": "Criacao de um site para a representacao negra",
-        "linkGitHub": "https://github.com/Apolo0013/Enciclopedia-Negra",
-        "linkSite": "https://apolo0013.github.io/Enciclopedia-Negra/#/home/",
-        "sobreMais": {
-            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-            "pathImagem": []
-        }
-    },
-    {
-        "IDNAME": "TABELAPERIODICA",
-        "nomeProjeto": "Tabela Periodica",
-        "area": "FrontEnd",
-        "pathPrint": "../assets/print-projeto/print-tabela.png",
-        "tags": ["JS", "CSS", "HTML", "RC"],
-        "resumo": "Criacao de um site que cujo o objetivo é expo os elementos",
-        "linkGitHub": "https://github.com/Apolo0013/tabela-periodica",
-        "linkSite": "https://apolo0013.github.io/tabela-periodica/",
-        "sobreMais": {
-            "texto": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "texto": {
+                "brasil": "O YouTube Download é uma aplicação web que permite ao usuário inserir um link do YouTube e realizar o download do conteúdo no formato de vídeo ou áudio. O projeto foi desenvolvido com foco na simplicidade de uso, oferecendo uma interface direta e funcional para conversão e obtenção dos arquivos.",
+                "ingles": "YouTube Download is a web application that allows users to enter a YouTube link and download the content in video or audio format. The project was developed with a focus on ease of use, offering a straightforward and functional interface for converting and obtaining files."
+            },
             "pathImagem": []
         }
     }

@@ -1,3 +1,6 @@
+//React
+import { useEffect, useState } from 'react'
+//CSS
 import './Info-Projetos.scss'
 //Type
 import type {ProjetoDate} from '../../type'
@@ -10,10 +13,27 @@ import { PathImagemProjeto } from '../../utils/Imagem'
 import TagsInline from '../ui/tags/tags'
 import Info_ProjetosMais from './Info-ProjetosMais/Info-Projetos+'
 import { UseGlobal } from '../../Context/ProviderContext'
+import type { JSONLinguagemSobreMaisProjeto } from '../../date/linguagem/linguagem'
 
-function Info_Projetos({ info }: { info: ProjetoDate }) {
+function Info_Projetos({ info }: { info: ProjetoDate, Lingua: JSONLinguagemSobreMaisProjeto | null}) {
     //Global
     const global = UseGlobal()!
+    const[Lingua, SetLingua] = useState<JSONLinguagemSobreMaisProjeto>({
+        linkGitHub: {
+            texto: "",
+            tituloMain: ""
+        },
+        linkSite: {
+            texto: "",
+            tituloMain: ""
+        },
+        resumoProjeto: "",
+        tecnologiaLinguagem: ""
+    })
+    useEffect(() => {
+        if (!global) return
+        SetLingua(global.Linguas[global.LinguaAtual].projetoInfo)
+    }, [global.LinguaAtual])
     return (
         <main className='wraper-conteiner-main-info-projeto'>
             <div className='conteiner-botao-voltar-projeto-info' onClick={() => {
@@ -28,26 +48,29 @@ function Info_Projetos({ info }: { info: ProjetoDate }) {
                 <div className="conteiner-info-comum-escrito">
                     <h1 className="h1-main">{info.nomeProjeto}</h1>
                     <div className="conteiner-resumo-info-comum">
-                        <h2 className='h2-main'>Resumo do projeto</h2> 
-                        <p className='p-main p-resumo-info-comum'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut molestiae esse dicta quaerat amet minima dolorem obcaecati, minus porro quisquam in ipsa quidem repellat libero officiis quas non delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptates eius doloribus dolor quisquam hic numquam, nostrum culpa voluptatem, iure harum. Officia earum optio exercitationem incidunt expedita animi obcaecati excepturi.</p>
+                        <h2 className='h2-main'>{Lingua ? Lingua.resumoProjeto : ""}</h2> 
+                        <p className='p-main p-resumo-info-comum'>{info.resumo[global.LinguaAtual]}</p>
                     </div>
                     <span className='conteiner-info-comum-link' onClick={() => window.location.href = info.linkGitHub}>
-                        <h2 className="h2-main">Link para o GitHub</h2>
+                        <h2 className="h2-main">{Lingua ? Lingua.linkGitHub.tituloMain : ""}</h2>
                         <span className="botao-link">
-                            <p>Link para o GitHub</p>
+                            <p>{Lingua ? Lingua.linkGitHub.texto : ""}</p>
                             <img src={GitHubIMG} alt="Imagem GitHub" />
                         </span>
                     </span>
                     <span className="conteiner-info-comum-link">
-                        <h2 className="h2-main">Link para o Site online</h2>
-                        <span className="botao-link" onClick={() => window.location.href = info.linkSite}>
-                            <p>Link para o Site online</p>
+                        <h2 className="h2-main">{Lingua ? Lingua.linkSite.tituloMain : ""}</h2>
+                        <span className={
+                            "botao-link " + (!info.linkSite ? "link-indisponivel" : "")
+                        }
+                            onClick={() => window.location.href = info.linkSite}>
+                            <p>{Lingua ? Lingua.linkSite.texto : ""}</p>
                             <img src={SiteIMG} alt="Imagem Site" />
                         </span>
                     </span>
                     {/*tags da linguagem ou tecnologia*/}
                     <span className="wraper-conteiner-tag">
-                        <h2 className='h2-main'>Tecnologias/Linguagem Usadas</h2>
+                        <h2 className='h2-main'>{Lingua ? Lingua.tecnologiaLinguagem : ""}</h2>
                         <TagsInline listatag={info.tags}/>
                     </span>
                 </div>

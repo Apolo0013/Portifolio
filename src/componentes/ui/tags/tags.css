@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap");
+.conteiner-tags {
+  padding: 0.1875rem;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.149);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.conteiner-tags .conteiner-tag-img {
+  height: 3.4375rem;
+  aspect-ratio: 1/1;
+}
+.conteiner-tags .conteiner-tag-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 500px) and (pointer: coarse) {
+  .conteiner-tags > .conteiner-tag-img {
+    height: 3.125rem;
+  }
+}
+@media (max-width: 400px) and (pointer: coarse) {
+  .conteiner-tags > .conteiner-tag-img {
+    height: 2.5rem;
+  }
+}/*# sourceMappingURL=tags.css.map */

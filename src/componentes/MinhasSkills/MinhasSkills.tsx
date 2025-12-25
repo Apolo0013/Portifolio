@@ -1,9 +1,11 @@
 import './MinhasSkills.scss'
-//json 
-import HabilidadeJSON from '../../date/minhaskills.json'
+
 //Utils
 import { PATHTAG, type TypePATHTAG } from '../../utils/Imagem'
 import Show_Conteiner from '../ui/show-conteiner/show-conteiner'
+import { useEffect, useState } from 'react'
+import  { type JSONLinguagemMinhasSkills, JSONMinhasSkills } from '../../date/linguagem/linguagem'
+import { UseGlobal } from '../../Context/ProviderContext'
 
 //Texto simple descrevendo as habilidade
 function DescreverHabilidade({ title, text, tag }: { title: string, text: string, tag: string }) {
@@ -22,16 +24,26 @@ function DescreverHabilidade({ title, text, tag }: { title: string, text: string
 
 
 function MinhasSkills() {
+    const [Lingua, _] = useState<JSONLinguagemMinhasSkills>(JSONMinhasSkills)
+    //global, sera usa pra saber a lingua atual
+    const global = UseGlobal()!
+    //lingua atual
+    const [LinguaAtual, SetLinguaAtual] = useState< "brasil" | "ingles">("brasil")
+    useEffect(() => {
+        if (!global) return
+        SetLinguaAtual(global.LinguaAtual)
+    }, [global.LinguaAtual])
     return (
         <Show_Conteiner>
-            
             <section className='sessao-corpo conteiter-minhas-habilidade'>
-                <h1 className='h1-main'>Minhas Habilidades</h1>
+                <h1 className='h1-main'>{Lingua.tituloMain[LinguaAtual]}</h1>
                 <div className="conteiner-habilidades">
                     {
-                        HabilidadeJSON.map((info, key) => (
-                            <DescreverHabilidade title={info.title} text={info.text} tag={info.tag} key={key}/>
+                        global
+                        ?Lingua.skills.map((info, key) => (
+                            <DescreverHabilidade title={info.title} text={info.text[LinguaAtual]} tag={info.tag} key={key}/>
                         ))
+                        : null
                     }
                 </div>
             </section>

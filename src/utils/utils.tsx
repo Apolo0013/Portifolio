@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from "react"
-import type { CardsProjetoInfo, TypetipoView} from "../type"
+import type { TypetipoView} from "../type"
 
 //Observar os cards dos projetos
 //Basicamente: ele vai add

@@ -1,0 +1,39 @@
+{
+    "cabeca": {
+        "fraseCurta": "Front-End Developer focused on React/JS",
+        "botoesRapido": {
+            "projeto": "Projects",
+            "contato": "Contact"
+        }
+    },
+    "sobreMim": {
+        "tituloMain": "About me",
+        "textoSobre": "I'm a Front-End developer with experience in JavaScript and TypeScript, creating fast and straightforward interfaces. I work with React and focus on clarity, performance, and clean code. I enjoy solving problems in a simple and practical way, always striving for improvement. I'm open to opportunities to work on real projects and deliver real results."
+    },
+    "projeto": {
+        "tituloMain": "Projects",
+        "Card": {
+            "resumo": "Summary",
+            "tags": "Tags"
+        }
+    },
+    "projetoInfo": {
+        "resumoProjeto": "Project summary",
+        "linkGitHub": {
+            "tituloMain": "Link to GitHub",
+            "texto": "Link to GitHub"
+        },
+        "linkSite": {
+            "tituloMain": "Link to the WebSite",
+            "texto": "Link to the WebSite"
+        },
+        "tecnologiaLinguagem": "Technologies and Languages ​​Used"
+    },
+    "projetoInfoMais": {
+        "tituloMain": "About more"
+    },
+    "contato": {
+        "tituloMain": "Contact",
+        "texto": "Want to talk to me? Call me through any of the channels below."
+    }
+}
