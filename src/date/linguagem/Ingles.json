@@ -7,10 +7,10 @@
         }
     },
     "navBar": {
-        "projeto": "",
-        "skills": "",
-        "sobre": "",
-        "contato": ""
+        "projeto": "Projects",
+        "skills": "Skills",
+        "sobre": "about",
+        "contato": "Contact"
     },
     "sobreMim": {
         "tituloMain": "About me",

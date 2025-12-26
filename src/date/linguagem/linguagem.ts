@@ -32,6 +32,7 @@ interface LinksSobre extends TituloMain {
     texto: string
 }
 
+//Sobre mais projeto
 export type JSONLinguagemSobreMaisProjeto = {
     resumoProjeto: string,
     linkGitHub: LinksSobre,
@@ -43,6 +44,13 @@ export type JSONLinguagemSobreMaisProjeto = {
 export interface JSONLinguagemContato extends TituloMain {
     texto: string
 }
+//Navegador bare
+export type JSONLinguagemNavBar = {
+    projeto: string,
+    skills: string,
+    sobre: string,
+    contato: string
+}
 
 export type JSONLinguagem = {
     cabeca: JSONLinguagemCabeca,
@@ -51,6 +59,7 @@ export type JSONLinguagem = {
     projetoInfo: JSONLinguagemSobreMaisProjeto,
     projetoInfoMais: TituloMain,
     contato: JSONLinguagemContato,
+    navBar: JSONLinguagemNavBar
 }
 
 

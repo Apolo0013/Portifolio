@@ -31,17 +31,17 @@ function SeletorIdioma() {
     //state para o style do setinha para baixo
     const [StyleSetar, SetStyleSetar] = useState<"0deg" | "180deg">("0deg")
     //State que controlar o componentes EscolherLingua
-    const [StateEscolherLingua, SetEscolherLingua] = useState<boolean>(true)
+    const [StateEscolherLingua, SetEscolherLingua] = useState<boolean>(false)
     //State para a singla
     const [Sigla, SetSigla] = useState<Siglas>("PT")
     //Global
     const global = UseGlobal()!
     //JSON tipado
     const idiomas: JSONIdiomas = JSONidiomas
-    //!-Traducao
-    
+
     useEffect(() => { 
         if (!global) return
+        //Setando a igual/atualizando
         SetSigla(idiomas[global.LinguaAtual].sigla)
     }, [global.LinguaAtual])
     return (
