@@ -66,7 +66,6 @@ function Projetos({GetRef, Lingua}: Props) {
     //Referencia dos conteiner cards projetos
     const RefConteinerCardsProjetos = useRef<Array<HTMLDivElement | null>>([])
 
-    console.log(Lingua)
     useEffect(() => {
         AddCardsStateProjeto()
     }, [])

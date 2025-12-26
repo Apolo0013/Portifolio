@@ -6,6 +6,12 @@
             "contato": "Contact"
         }
     },
+    "navBar": {
+        "projeto": "",
+        "skills": "",
+        "sobre": "",
+        "contato": ""
+    },
     "sobreMim": {
         "tituloMain": "About me",
         "textoSobre": "I'm a Front-End developer with experience in JavaScript and TypeScript, creating fast and straightforward interfaces. I work with React and focus on clarity, performance, and clean code. I enjoy solving problems in a simple and practical way, always striving for improvement. I'm open to opportunities to work on real projects and deliver real results."

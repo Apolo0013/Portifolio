@@ -1,2 +1,50 @@
 @use '../../utils/utils.scss' as *;
 
+$cor-border: #343030; 
+
+.Navegador {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: rem(3);
+    padding-right: 3vw;
+    margin-top: 3vh;
+    gap: 3vw;
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+            90deg,
+            transparent 0%,
+            $cor-border 70%,
+            $cor-border 100%,
+            );  
+    }
+
+    .lista-nav {
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: rem(30);
+        
+        li {
+            flex: 1;
+            a {
+                color: $texto-segundario;
+                font-size: rem(20);
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    }
+}

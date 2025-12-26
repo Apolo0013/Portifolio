@@ -1,0 +1,10 @@
+{
+    "brasil": {
+        "sigla": "PT",
+        "nome": "Português"
+    },
+    "ingles": { 
+        "sigla": "EN",
+        "nome": "English"
+    }
+}

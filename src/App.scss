@@ -11,6 +11,16 @@
 }
 //////////////////////////////////////////////////////////////////////
 //Class utils
+.NOTYPELIST {
+    list-style: none;
+    li {list-style: none;}
+}
+//tag a, sem aquelas cores padrao e style
+.A-normal {
+    text-decoration: none;
+    color: black;
+}
+
 .bold-italic {
     font-weight: bold;
     font-style: italic;
@@ -49,6 +59,7 @@
     hyphens: auto;
     text-indent: rem(20);
 }
+
 //Responsividade/Adpitacao deles
 @media (max-width: 1000px) {
     .h1-main {

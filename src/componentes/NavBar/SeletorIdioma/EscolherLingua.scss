@@ -1,0 +1,67 @@
+@use '../../../utils/utils.scss' as *;
+@use './Seletor-Idioma.scss' as *;
+
+
+.Escolher-Lingua {
+    border: 3px solid $cor-border-si;
+    border-radius: 8px;
+    background: $cards;
+    left: -100%;
+    top: 180%;
+    position: absolute;
+    width: rem(200);
+    height: auto;
+
+    .caret {
+        width: 25%;
+        height: rem(30);
+        bottom: 100%;
+        right: 5%;
+        background: $cor-border-si;
+        position: absolute;
+        //deixa ele com formato de um traiagulo
+        clip-path: polygon(
+            0 100%,
+            50% 0,
+            100% 100%,
+            0 100%
+        );
+    }
+
+    ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: rem(4);
+        gap: rem(5);
+        
+        li {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: rem(10);
+            justify-content: flex-start;
+            width: 100%;
+            height: rem(55);
+            padding: rem(5);
+            border-radius: 5px;
+
+            .img-pais {
+                object-fit: contain;
+                height: 85%;    
+            }
+
+            .nome-pais-idioma {
+                font-size: rem(20);
+            }
+        }
+    }
+}
+
+.idioma-selecionado {
+    //vou da a cor do botao para o idioma selecionando.
+    background: $botao;
+}
