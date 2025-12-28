@@ -15,7 +15,7 @@ import Info_ProjetosMais from './Info-ProjetosMais/Info-Projetos+'
 import { UseGlobal } from '../../Context/ProviderContext'
 import type { JSONLinguagemSobreMaisProjeto } from '../../date/linguagem/linguagem'
 
-function Info_Projetos({ info }: { info: ProjetoDate, Lingua: JSONLinguagemSobreMaisProjeto | null}) {
+function Info_Projetos({ info }: { info: ProjetoDate}) {
     //Global
     const global = UseGlobal()!
     const[Lingua, SetLingua] = useState<JSONLinguagemSobreMaisProjeto>({

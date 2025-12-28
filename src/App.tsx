@@ -11,6 +11,7 @@ import { UseGlobal } from './Context/ProviderContext'
 //Outros
 import { useEffect, useState, useRef } from 'react'
 import type { JSONLinguagem, LinguagensDisponivel } from './date/linguagem/linguagem'
+import NavigatorBar from './componentes/NavBar/NavBar'
 
 function App() {
     //Referencia dos componentes
@@ -27,6 +28,7 @@ function App() {
     }, [global.LinguaAtual])
     return (
         <div className="App">
+            <NavigatorBar/>
             <Cabeca RefConteiner={{ contato: RefContato, projeto: RefProjetos }} Lingua={
                     StateLinguaContent
                     ? StateLinguaContent?.cabeca

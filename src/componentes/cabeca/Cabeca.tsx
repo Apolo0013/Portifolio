@@ -6,7 +6,6 @@ import Show_Conteiner from '../ui/show-conteiner/show-conteiner'
 //Type
 import { type RefObject } from 'react'
 import type { JSONLinguagemCabeca } from '../../date/linguagem/linguagem'
-import NavigatorBar from '../NavBar/NavBar'
 
 type Props = {
     RefConteiner: { contato: RefObject<HTMLElement | null>, projeto: RefObject<HTMLElement | null> },
@@ -18,8 +17,6 @@ function Cabeca({ RefConteiner, Lingua }: Props) {
     return (
         <Show_Conteiner>
             <header className="wraper-conteiner-cabeca">
-                {/*Navagador*/}
-                <NavigatorBar/>
                 <div className="back-circle"></div>
                 <div className="conteiner-cabeca">
                     <div className="conteiner-imagem-penso">

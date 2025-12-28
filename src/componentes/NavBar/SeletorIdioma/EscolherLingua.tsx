@@ -7,6 +7,7 @@ import brasilIMG from '../../../assets/pais/brasil.svg'
 import usaIMG from '../../../assets/pais/usa.svg'
 import { UseGlobal } from '../../../Context/ProviderContext'
 import type { LinguagensDisponivel } from '../../../date/linguagem/linguagem'
+import { useMediaQuery } from '../../../hooks/MediaQuery'
 
 function EscolherLingua({idiomas}: {idiomas: JSONIdiomas}) {
     const imgsrc: { [key: Siglas]: string } = {
@@ -15,8 +16,10 @@ function EscolherLingua({idiomas}: {idiomas: JSONIdiomas}) {
     }   
     //Global
     const global = UseGlobal()!
+    //mediaquery via js.
+    const IsMobile: boolean = useMediaQuery('(max-width: 500px) and (pointer: coarse)')
     return (
-        <div className="Escolher-Lingua">
+        <div className={`Escolher-Lingua ${IsMobile ? "Navegador-dispositivo-movel-EscolherLingua" : ""}`}>
             <span className="caret"></span>
             <ul className="NOTYPELIST">
                 {Object.entries(idiomas).map((info, key) => (

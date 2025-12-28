@@ -11,8 +11,6 @@ import { Linguagem, type LinguagensDisponivel } from "../date/linguagem/linguage
 function ProviderContext({ children }: {
     children: React.ReactNode
 }) {
-    //Global Contexto
-    const global = UseGlobal()!
     //State para o componente que exbir as informacao do projeto
     const [StateInfoProjeto, SetInfoProjeto] = useState<StateShowInfoProjeto>({ info: null, show: false })
     //State para o componentes de ver a imagem

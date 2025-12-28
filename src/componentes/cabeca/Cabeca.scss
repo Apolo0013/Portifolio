@@ -8,6 +8,7 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    z-index: 1;
 
     .back-circle {
         position: absolute;
@@ -19,6 +20,7 @@
         border-radius: 50%;
         background: rgb(39, 154, 241);
         box-shadow: 0 0 20px 0 rgb(39, 154, 241);
+        opacity: 0.2;
     }
     
 
@@ -90,9 +92,6 @@
 @media (max-width: 1000px) {
     .wraper-conteiner-cabeca > .conteiner-cabeca {
         width: 60%;
-
-
-
         .conteiner-imagem-penso > .img-MinhaFoto {
             height: rem(270);
         }
@@ -139,7 +138,6 @@
 
         .wraper-conteiner-conteudo-head { 
             gap: rem(20);
-
             .frase-curta-head {
                 font-size: rem(15);
             }

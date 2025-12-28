@@ -6,9 +6,10 @@
     border: 3px solid $cor-border-si;
     border-radius: 8px;
     background: $cards;
-    left: -100%;
+    left: -100% !important;
     top: 180%;
     position: absolute;
+    z-index: 1000;
     width: rem(200);
     height: auto;
 
@@ -56,6 +57,7 @@
 
             .nome-pais-idioma {
                 font-size: rem(20);
+                color: white;
             }
         }
     }
@@ -64,4 +66,50 @@
 .idioma-selecionado {
     //vou da a cor do botao para o idioma selecionando.
     background: $botao;
+}
+
+//Responsividade
+//largura <= 750px
+@media (max-width: 750px) {
+    .Escolher-Lingua {
+        top: 220%;
+
+        ul > li {
+            height: rem(50);
+
+            .nome-pais-idioma {
+                font-size: rem(18);
+            }
+        }
+    }
+}
+
+//Responsividade para dispositivo movel
+.Navegador-dispositivo-movel-EscolherLingua {
+    left: -60%;
+    top: 190%;
+
+    .nome-pais-idioma {
+        font-size: rem(16) !important;
+    }
+
+    .caret {
+        right: 5%;
+    }
+}
+
+//largura <= 400px 
+@media (max-width: 400px) and (pointer: coarse) {
+    .Navegador-dispositivo-movel-EscolherLingua {
+        left: -70%;
+
+        .caret {
+            height: rem(25);           
+            width: 20%;
+        }
+
+        ul > li {
+            height: rem(45) !important;
+        }
+    }
 }

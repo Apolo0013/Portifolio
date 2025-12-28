@@ -9,6 +9,7 @@ import EscolherLingua from './EscolherLingua'
 //JSON com as linguagem disponivel
 import JSONidiomas from '../../../date/linguagem/idioma-disponivel.json'
 import { UseGlobal } from '../../../Context/ProviderContext'
+import { useMediaQuery } from '../../../hooks/MediaQuery'
 
 //Tipa o json
 //string para o ts parar de pertubar
@@ -26,8 +27,8 @@ export type JSONIdiomas = {
     ingles: IdiomasInfo
 }
 
-
-function SeletorIdioma() {
+//Left do NavBar, nois fica sabendo se ele esta visivel ou nao
+function SeletorIdioma({ left }: { left: number}) {
     //state para o style do setinha para baixo
     const [StyleSetar, SetStyleSetar] = useState<"0deg" | "180deg">("0deg")
     //State que controlar o componentes EscolherLingua
@@ -44,8 +45,28 @@ function SeletorIdioma() {
         //Setando a igual/atualizando
         SetSigla(idiomas[global.LinguaAtual].sigla)
     }, [global.LinguaAtual])
+
+    //vamos monitora o valor de leftt
+    useEffect(() => {
+        //se left for direferente de que dizer que ele esta invisivel, entao vamos retirar esse componentes
+        if (left != 0) { 
+            SetEscolherLingua(false) // retirando o compoentnens
+            SetStyleSetar('0deg') // deixa a setar na direcao normal
+        } 
+    }, [left]) 
+
+    //mediaquery via js.
+    const IsMobile: boolean = useMediaQuery('(max-width: 500px) and (pointer: coarse)')
     return (
-        <div className='Seletor-Idioma'>
+        <div className={`Seletor-Idioma ${IsMobile
+            //so terar essa class se for mobile
+            ? "Navegador-dispositivo-movel-SeletorIdioma"
+            : ""}`}
+            style={{
+                //so terar essa propriedade se for para mobile
+                left: IsMobile ? (left == 0 ? 110 :  0) + '%' : "0"
+            }}
+        >
             <ul className="NOTYPELIST">
                 <li>
                     <img src={MundoImg} alt="Imagem de um globo" className='img-globo'/>
@@ -68,7 +89,9 @@ function SeletorIdioma() {
                     />
                 </li>
             </ul>
-            {StateEscolherLingua ? <EscolherLingua idiomas={JSONidiomas} /> : null}
+            {
+                StateEscolherLingua ? <EscolherLingua idiomas={JSONidiomas} /> : null
+            }
         </div>
     )
 }

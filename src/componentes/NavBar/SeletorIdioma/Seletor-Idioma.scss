@@ -5,7 +5,6 @@ $cor-border-si: #5e5e5e;
 .Seletor-Idioma {
     background: linear-gradient(180deg, $cards, lighten($cards, 5%));
     border: 3px solid $cor-border-si;
-    width: auto;
     height: 100%;
     width: auto;
     padding: rem(7);
@@ -41,6 +40,7 @@ $cor-border-si: #5e5e5e;
             .sigla-lingua {
                 font-size: rem(25);
                 font-weight: bold;
+                color: white;
             }
 
             .setar-baixo {
@@ -52,5 +52,36 @@ $cor-border-si: #5e5e5e;
             img {transition: transform 0.1s ease-in-out;}
             cursor: pointer;
         }
+    }
+}
+
+//Responsividade
+//largura <= 750px
+@media (max-width: 750px) {
+    .Seletor-Idioma {
+        height: 80%;
+
+        ul > li > .setar-baixo {
+            height: 60%;
+        }
+    }
+}
+
+//Responsividade Movel
+.Navegador-dispositivo-movel-SeletorIdioma {
+    position: absolute;
+    top: 12%;
+    width: auto;
+    height: rem(45);
+    transition: left 0.34s ease-in-out;
+
+    ul > li > .sigla-lingua {
+        font-size: rem(23);
+    }
+}
+
+@media (max-width: 400px) and (pointer: coarse) {
+    .sigla-lingua {
+        font-size: rem(20) !important;
     }
 }
