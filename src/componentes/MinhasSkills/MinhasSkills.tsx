@@ -1,9 +1,8 @@
 import './MinhasSkills.scss'
-
 //Utils
 import { PATHTAG, type TypePATHTAG } from '../../utils/Imagem'
 import Show_Conteiner from '../ui/show-conteiner/show-conteiner'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type RefObject } from 'react'
 import  { type JSONLinguagemMinhasSkills, JSONMinhasSkills } from '../../date/linguagem/linguagem'
 import { UseGlobal } from '../../Context/ProviderContext'
 
@@ -23,7 +22,7 @@ function DescreverHabilidade({ title, text, tag }: { title: string, text: string
 }
 
 
-function MinhasSkills() {
+function MinhasSkills({ GetRef }: { GetRef: RefObject<HTMLElement | null>}) {
     const [Lingua, _] = useState<JSONLinguagemMinhasSkills>(JSONMinhasSkills)
     //global, sera usa pra saber a lingua atual
     const global = UseGlobal()!
@@ -35,7 +34,9 @@ function MinhasSkills() {
     }, [global.LinguaAtual])
     return (
         <Show_Conteiner>
-            <section className='sessao-corpo conteiter-minhas-habilidade'>
+            <section className='sessao-corpo conteiter-minhas-habilidade'
+                ref={GetRef}
+            >
                 <h1 className='h1-main'>{Lingua.tituloMain[LinguaAtual]}</h1>
                 <div className="conteiner-habilidades">
                     {

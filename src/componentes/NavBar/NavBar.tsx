@@ -1,5 +1,5 @@
 //Navegacao rapida
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from 'react'
 import { UseGlobal } from '../../Context/ProviderContext'
 import './NavBar.scss'
 import SeletorIdioma from './SeletorIdioma/Seletor-Idioma'
@@ -8,8 +8,25 @@ import type { JSONLinguagemNavBar } from '../../date/linguagem/linguagem'
 import MenuIMG from '../../assets/imagens/menu.svg'
 import { useMediaQuery } from '../../hooks/MediaQuery'
 
+type ref = RefObject<HTMLElement | null>
+type Props = {
+    //lista das sessao. serao usar para da scroll ate la
+    listasessao: {
+        sobremim: ref,
+        projeto: ref,
+        skill: ref,
+        contato: ref
+    }
+}
 //botao para nevegar ate o sessao
-function NavigatorBar() {
+function NavigatorBar({listasessao}: Props) {
+    function ScrollRef(ref: ref) {
+        //essa funcao vai receber um referencia para da o scroll
+        if (!ref.current) return // caso seja null
+        ref.current.scrollIntoView({block: "center", behavior: "smooth"})
+    }
+
+
     function HandlerMenuMobile() {
         //essa funcao que fazer o conteiner em si, se esconder e aparace
         if (!RefNav.current) return // caso ainda for null
@@ -45,13 +62,22 @@ function NavigatorBar() {
     
     //useLayoutEffect, ele roda antes de rederizar.
     useLayoutEffect(() => {
-        if (!RefNav.current || !IsMobile) return
-        const { width }: { width: number } = RefNav.current.getBoundingClientRect()
-        SetLeftNav(-width)
-    }, [])
+        if (!IsMobile) {
+            //caso ele nao for mobile vamos colocao left dele pra zero
+            SetLeftNav(0) 
+        }
+        else {
+            if (!RefNav.current) return
+            const { width }: { width: number } = RefNav.current.getBoundingClientRect()
+            SetLeftNav(-width)
+        }
+    }, [IsMobile])
     
     return (    
-        <nav className={`Navegador  ${IsMobile ? "Navegador-dispositivo-movel-navbar" : ""}`}
+        <nav className={`Navegador  ${IsMobile
+            ? "Navegador-dispositivo-movel-navbar"
+            : ""
+            }`}
             ref={RefNav}
             style={{
                 left: LeftNav + 'px' 
@@ -65,17 +91,17 @@ function NavigatorBar() {
                 <img src={MenuIMG} alt="Foto do menur burguer" />
             </span>
             <ul className='NOTYPELIST lista-nav'>
-                <li>
-                    <a href={Lingua ? "#" +  Lingua.projeto : "#"} className='A-normal'>{Lingua ? Lingua.projeto : ""}</a>
+                <li onClick={() => ScrollRef(listasessao.projeto)}>
+                    <a href="#" className='A-normal'>{Lingua ? Lingua.projeto : ""}</a>
                 </li>
-                <li>
-                    <a href={Lingua ? Lingua.skills : "#"} className='A-normal'>{Lingua ? Lingua.skills : ""}</a>
+                <li onClick={() => ScrollRef(listasessao.skill)}>
+                    <a href="#" className='A-normal'>{Lingua ? Lingua.skills : ""}</a>
                 </li>
-                <li>
-                    <a href={Lingua ? Lingua.skills : "#"} className='A-normal'>{Lingua ? Lingua.sobre : ""}</a>
+                <li onClick={() => ScrollRef(listasessao.sobremim)}>
+                    <a href="#" className='A-normal'>{Lingua ? Lingua.sobre : ""}</a>
                 </li>
-                <li>
-                    <a href={Lingua ? Lingua.contato : "#"} className='A-normal'>{Lingua ? Lingua.contato : ""}</a>
+                <li onClick={() => ScrollRef(listasessao.contato)}>
+                    <a href='#' className='A-normal'>{Lingua ? Lingua.contato : ""}</a>
                 </li>
             </ul>
             {

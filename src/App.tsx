@@ -15,8 +15,11 @@ import NavigatorBar from './componentes/NavBar/NavBar'
 
 function App() {
     //Referencia dos componentes
-    const RefProjetos = useRef<HTMLElement | null>(null)
-    const RefContato = useRef<HTMLElement | null>(null)
+    type El = HTMLElement | null
+    const RefProjetos = useRef<El>(null)
+    const RefContato = useRef<El>(null)
+    const RefSobre = useRef<El>(null)
+    const RefHabalidade = useRef<El>(null)
     //State para o componente Info_Projetos
     //Global contexto
     const global = UseGlobal()!
@@ -28,13 +31,20 @@ function App() {
     }, [global.LinguaAtual])
     return (
         <div className="App">
-            <NavigatorBar/>
+            <NavigatorBar
+                listasessao={{
+                    contato: RefContato,
+                    projeto: RefProjetos,
+                    skill: RefHabalidade,
+                    sobremim: RefSobre
+                }}
+            />
             <Cabeca RefConteiner={{ contato: RefContato, projeto: RefProjetos }} Lingua={
                     StateLinguaContent
                     ? StateLinguaContent?.cabeca
                     : null
             } />
-            <Sobre Lingua={
+            <Sobre GetRef={RefSobre} Lingua={
                     StateLinguaContent
                     ? StateLinguaContent?.sobreMim
                     : null
@@ -44,7 +54,7 @@ function App() {
                     ? StateLinguaContent.projeto
                     : null
             } />
-            <MinhasSkills />
+            <MinhasSkills GetRef={RefHabalidade} />
             <Contato GetRef={RefContato} Lingua={
                     StateLinguaContent 
                         ? StateLinguaContent.contato
