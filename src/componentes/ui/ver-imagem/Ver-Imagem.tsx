@@ -1,15 +1,22 @@
 //CSS
 import './Ver-Imagem.scss'
 //Controladores de Eventos
-import { HandlerMouseDown, HandlerMouseLeave, HandlerMouseMove, HandlerMouseUp, HandlerMouseDbl } from './handlers'
+import { HandlerMouseDown, HandlerMouseLeave, HandlerMouseMove, HandlerMouseUp, HandlerMouseDbl, HandlerScroll} from './handlers'
 //Variavel global
 import useModal from './VarHandler'
+//global
 import { UseGlobal } from '../../../Context/ProviderContext'
 
 function VerImagem({ src }: { src: string}) {
     //Pegando o useState do modal, styleinline do elemento ondem vai controlar a imagem
     const Modal = useModal()
-    const { PegarCursor, PegarTranslate, PegarScale, RefImagem, RefWraperImagem } = Modal
+    const {
+        PegarCursor,
+        PegarTranslate,
+        PegarScale,
+        RefImagem,
+        RefWraperImagem,
+    } = Modal
     //Global contexto
     const global = UseGlobal()!
     return (
@@ -27,7 +34,7 @@ function VerImagem({ src }: { src: string}) {
             <div className='conteiner-ver-imagem-show'
                 ref={RefWraperImagem}
                 //Controaldores de eventos
-                onMouseDown={(e) => HandlerMouseDown(e ,Modal)}
+                onMouseDown={(e) => HandlerMouseDown(e, Modal)}
                 onMouseLeave={() => HandlerMouseLeave(Modal)}
                 onMouseMove={(e) => HandlerMouseMove(e, Modal)}
                 onMouseUp={() => HandlerMouseUp(Modal)}
@@ -44,6 +51,15 @@ function VerImagem({ src }: { src: string}) {
                 >
                     <span className='noclick'></span>
                     <img src={src} alt="Imagem" draggable="false"/>
+                </div>
+                {/*Conteudo fantasma ele tera o seu scroll disponivel. para nois pegar nele memo*/}
+                <div className='scroll-fantasma'
+                    //Scroll
+                    onWheel={(e) => HandlerScroll(e ,Modal)}
+                >
+                    <span className="conteudo-fake"></span>
+                    <span className="conteudo-fake"></span>
+                    <span className="conteudo-fake"></span>
                 </div>
             </div>
         </section>

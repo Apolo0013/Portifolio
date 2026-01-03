@@ -36,6 +36,9 @@ function MinhasSkills({ GetRef }: { GetRef: RefObject<HTMLElement | null>}) {
         <Show_Conteiner>
             <section className='sessao-corpo conteiter-minhas-habilidade'
                 ref={GetRef}
+                //aria
+                aria-label='Ondem você pode ver minhas habalidades'
+                tabIndex={0}
             >
                 <h1 className='h1-main'>{Lingua.tituloMain[LinguaAtual]}</h1>
                 <div className="conteiner-habilidades">

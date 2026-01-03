@@ -12,7 +12,6 @@ type Props = {
     Lingua: JSONLinguagemCabeca | null
 } 
 
-
 function Cabeca({ RefConteiner, Lingua }: Props) {
     return (
         <Show_Conteiner>

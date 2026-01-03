@@ -13,6 +13,8 @@ import { useEffect, useState, useRef } from 'react'
 import type { JSONLinguagem, LinguagensDisponivel } from './date/linguagem/linguagem'
 import NavigatorBar from './componentes/NavBar/NavBar'
 
+import fds from './assets/print-projeto/Enciclopedia-Negra/imagem1.jpg'
+
 function App() {
     //Referencia dos componentes
     type El = HTMLElement | null
@@ -26,6 +28,10 @@ function App() {
     const [StateLinguaContent, SetLinguaContent] = useState<JSONLinguagem | null>(null)
     useEffect(() => {
         if (!global) return // caso ele for null.
+        global.StateVerImagem({
+            show: true,
+            src: fds
+        })
         const lingua: LinguagensDisponivel = global.LinguaAtual
         SetLinguaContent(global.Linguas[lingua])
     }, [global.LinguaAtual])

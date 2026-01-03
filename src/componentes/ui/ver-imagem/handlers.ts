@@ -128,7 +128,7 @@ export function HandlerMouseMove(e: MouseEvent<HTMLElement>, {
     RefWraperImagem
 }: ReturnUseModal) {
     //deve esta com zoom ativado o pressionando tambem
-    if (!PegarPress() || !PegarZoomActive) return
+    if (!PegarPress() || !PegarZoomActive || PegarScale() < 1.25) return
     //x e y do pai
     const { x, y } = { x: e.clientX, y: e.clientY }
     const poslast: xyType = PegarPosicaoLast() // pegando a posicao last/anterior
@@ -192,4 +192,40 @@ export function HandlerMouseLeave({
     AlterarTranslate({ x: 0, y: 0 }) // 0 e 0, padrao
     AlterarCursor('zoom-in') // alterando para o cusro de dar zoom
     AlterarZoomActive(false) // nao esta dando zoom
+}
+
+//Controlador do Scroll
+export function HandlerScroll(
+    e: React.WheelEvent<HTMLDivElement>,
+    {
+        AlterarScale,
+        PegarScale,
+        AlterarZoomActive,
+        RefImagem,
+        RefWraperImagem,
+        AlterarPosicaoAtual,
+        PegarPosicaoAtual,
+        AlterarTranslate
+
+    }: ReturnUseModal) {
+    //ajustando a posicao caso ele tenha escapulindo
+    AjustaPosicao({
+        RefImagem: RefImagem,
+        RefWraperImagem: RefWraperImagem,
+        AlterarPosicaoAtual: AlterarPosicaoAtual,
+        PegarPosicaoAtual: PegarPosicaoAtual,
+        AlterarTranslate: AlterarTranslate
+    })
+    //Scale 
+    let scale: number = PegarScale()
+    //verificando se o scroll foi pra cima ou baixo
+    if (e.deltaY < 0) scale += 0.1 // cima
+    else if (e.deltaY > 0) scale -= 0.1 // baixo
+    //se o scale for menor a 1
+    if (scale < 1 || scale > 2) return // simplementes vamos retorna.
+    //caso o scale passe de 1.25 scale o usuario ta permitido em mexer a tela
+    if (scale >= 1.25) AlterarZoomActive(true) // ele pode move na tela
+    else AlterarZoomActive(false)
+    //mudando o scale
+    AlterarScale(scale)
 }

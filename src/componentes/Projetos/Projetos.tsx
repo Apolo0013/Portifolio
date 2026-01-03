@@ -71,7 +71,10 @@ function Projetos({GetRef, Lingua}: Props) {
     }, [])
     return (
         <Show_Conteiner>
-            <section className="sessao-corpo conteiner-projetos" ref={GetRef}>
+            <section className="sessao-corpo conteiner-projetos" ref={GetRef}
+                aria-label='Ondem você pode ler e ver os meu projetos'
+                tabIndex={0}
+            >
                 <h1 className="h1-main">{Lingua ? Lingua.tituloMain : ""}</h1>
                 <div className='wraper-conteiner-cards'>
                     <MoveScroll direcao="left" conteiner={RefConteinerCardsScroll} ListaCards={RefConteinerCardsProjetos}/> {/*Controlado do scroll*/}

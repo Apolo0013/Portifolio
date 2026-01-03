@@ -52,3 +52,22 @@ $fundo-vi: #0f0f0f73;
     height: 100%;
     width: 100%;
 }
+
+//Scroll fantasma
+.scroll-fantasma {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    overflow-y: auto;
+    opacity: 1;
+    scroll-behavior: none;
+
+    .conteudo-fake {
+        display: block;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+    }
+}

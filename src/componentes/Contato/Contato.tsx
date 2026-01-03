@@ -22,16 +22,36 @@ function Contato({ GetRef, Lingua}: Props) {
                 <p className='p-main'>{Lingua ? Lingua.texto : ""}</p>
                 {/*Icones que redirencionar para o github, email, zap e linkdin*/}
                 <div className='conteiner-icone-link'>
-                    <a href="https://wa.me/5584986640358" className="link-contato">
+                    <a href="https://wa.me/5584986640358"
+                        className="link-contato"
+                        //aria
+                        aria-label="Meu whatsApp"
+                        tabIndex={0}
+                    >
                         <img src={ZapIMG} alt="Imagem do whatsApp" />
                     </a>
-                    <a href="https://www.linkedin.com/in/apolonio-guilherme-11a825322/" className="link-contato">
+                    <a href="https://www.linkedin.com/in/apolonio-guilherme-11a825322/"
+                        className="link-contato"
+                        //aria
+                        aria-label='Meu Linkdin'
+                        tabIndex={0}
+                    >
                         <img src={LKIMG} alt="Imagem do LinkDin" />
                     </a>
-                    <a href="mailto:apolonbio913@gmail.com?subject=Contato%20Portfólio de Apolonio Guilherme&body=Vi%20seu%20portfólio%20e%20gostaria%20de%20falar%20com%20você." className="link-contato">
+                    <a href="mailto:apolonbio913@gmail.com?subject=Contato%20Portfólio de Apolonio Guilherme&body=Vi%20seu%20portfólio%20e%20gostaria%20de%20falar%20com%20você."
+                        className="link-contato"
+                        //aria
+                        aria-label="Meu Email"
+                        tabIndex={0}
+                    >
                         <img src={EmailIMG} alt="Imagem do Email" />
                     </a>
-                    <a href="https://github.com/Apolo0013" className="link-contato">
+                    <a href="https://github.com/Apolo0013"
+                        className="link-contato"
+                        //aria
+                        aria-label="Meu GitHub"
+                        tabIndex={0}
+                    >
                         <img src={GitHubIMG} alt="Imagem do GitHub" />
                     </a>
                 </div>

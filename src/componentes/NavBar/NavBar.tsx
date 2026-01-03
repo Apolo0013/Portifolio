@@ -82,6 +82,9 @@ function NavigatorBar({listasessao}: Props) {
             style={{
                 left: LeftNav + 'px' 
             }}
+            //aria
+            aria-label='Acesso facil para navegar'
+            
         >
             <span className="menu-mobile-nav"
                 //so estarar disponivel se for mobile
@@ -91,17 +94,38 @@ function NavigatorBar({listasessao}: Props) {
                 <img src={MenuIMG} alt="Foto do menur burguer" />
             </span>
             <ul className='NOTYPELIST lista-nav'>
-                <li onClick={() => ScrollRef(listasessao.projeto)}>
-                    <a href="#" className='A-normal'>{Lingua ? Lingua.projeto : ""}</a>
+                <li onClick={() => ScrollRef(listasessao.projeto)} >
+                    <a href="#"
+                        className='A-normal'
+                        aria-label='Meus Projetos'
+                        tabIndex={0}
+                    >
+                        {Lingua ? Lingua.projeto : ""}
+                    </a>
                 </li>
                 <li onClick={() => ScrollRef(listasessao.skill)}>
-                    <a href="#" className='A-normal'>{Lingua ? Lingua.skills : ""}</a>
+                    <a href="#"
+                        className='A-normal'
+                        aria-label='Minhas Habalidades'
+                        tabIndex={0}
+                    >
+                        {Lingua ? Lingua.skills : ""}
+                    </a>
                 </li>
                 <li onClick={() => ScrollRef(listasessao.sobremim)}>
-                    <a href="#" className='A-normal'>{Lingua ? Lingua.sobre : ""}</a>
+                    <a href="#"
+                        className='A-normal'
+                        aria-label="Sobre mim"
+                        tabIndex={0}
+                    >{Lingua ? Lingua.sobre : ""}
+                    </a>
                 </li>
-                <li onClick={() => ScrollRef(listasessao.contato)}>
-                    <a href='#' className='A-normal'>{Lingua ? Lingua.contato : ""}</a>
+                <li onClick={() => ScrollRef(listasessao.contato)}> 
+                    <a href='#'
+                        className='A-normal'
+                        aria-label="Entrem contato comigo"
+                        tabIndex={0}
+                    >{Lingua ? Lingua.contato : ""}</a>
                 </li>
             </ul>
             {

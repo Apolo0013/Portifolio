@@ -2,6 +2,9 @@
 
 * {
     font-family: 'Roboto'; // Fonte global
+    &:focus-visible {
+        outline-color: $botao;
+    }
 }
 
 .App {

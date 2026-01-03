@@ -19,7 +19,7 @@ function ProviderContext({ children }: {
         src: ""
     })
     //State que guardar o nome da lingua salva
-    const [StateLingua, SetLingua] = useState<LinguagensDisponivel>("ingles")
+    const [StateLingua, SetLingua] = useState<LinguagensDisponivel>('brasil')
     return (
         <ContextGlobal.Provider value={{
             StateSetInfoProjeto: SetInfoProjeto,

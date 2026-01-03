@@ -1,4 +1,4 @@
-import { type Dispatch, type RefObject, type SetStateAction, useRef, useState } from "react"
+import { type Dispatch, type RefObject, type SetStateAction, useState, useRef} from "react"
 //TYPE/////////////////////////////////////////////////////////////////////////
 //Type
 //state do styleinline
@@ -39,7 +39,7 @@ export type ReturnUseModal = {
     PegarPress: () => boolean
     //Referencia aos elementos
     RefWraperImagem: RefObject<HTMLDivElement | null>,
-    RefImagem: RefObject<HTMLDivElement | null>
+    RefImagem: RefObject<HTMLDivElement | null>,
 }
 /////////////////////////////////////////////////////////////////////////
 //Type Das variavel de controle
@@ -153,11 +153,11 @@ function useModal(): ReturnUseModal {
         }))
     }   
     //State
-    function PegarPress(): boolean {return StateVarHandler.press}
+    function PegarPress(): boolean { return StateVarHandler.press }
+    //=================================================================
     //Referencia conteiner ondem fica a img e a propria imagem
     const RefWraperImagem = useRef<HTMLDivElement | null>(null)
     const RefImagem = useRef<HTMLDivElement | null>(null)
-
     return {
         Style: StateStyleInlineImagem, // somente leitura
         //Cursor
@@ -184,7 +184,8 @@ function useModal(): ReturnUseModal {
         PegarPress: PegarPress,
         //Referencia
         RefImagem: RefImagem,
-        RefWraperImagem: RefWraperImagem
+        RefWraperImagem: RefWraperImagem,
+
     }
 }
 

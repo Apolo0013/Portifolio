@@ -28,7 +28,7 @@ export type JSONIdiomas = {
 }
 
 //Left do NavBar, nois fica sabendo se ele esta visivel ou nao
-function SeletorIdioma({ left }: { left: number}) {
+function SeletorIdioma({ left }: { left: number }) {
     //state para o style do setinha para baixo
     const [StyleSetar, SetStyleSetar] = useState<"0deg" | "180deg">("0deg")
     //State que controlar o componentes EscolherLingua
@@ -40,7 +40,7 @@ function SeletorIdioma({ left }: { left: number}) {
     //JSON tipado
     const idiomas: JSONIdiomas = JSONidiomas
 
-    useEffect(() => { 
+    useEffect(() => {
         if (!global) return
         //Setando a igual/atualizando
         SetSigla(idiomas[global.LinguaAtual].sigla)
@@ -49,11 +49,11 @@ function SeletorIdioma({ left }: { left: number}) {
     //vamos monitora o valor de leftt
     useEffect(() => {
         //se left for direferente de que dizer que ele esta invisivel, entao vamos retirar esse componentes
-        if (left != 0) { 
+        if (left != 0) {
             SetEscolherLingua(false) // retirando o compoentnens
             SetStyleSetar('0deg') // deixa a setar na direcao normal
-        } 
-    }, [left]) 
+        }
+    }, [left])
 
     //mediaquery via js.
     const IsMobile: boolean = useMediaQuery('(max-width: 500px) and (pointer: coarse)')
@@ -64,17 +64,22 @@ function SeletorIdioma({ left }: { left: number}) {
             : ""}`}
             style={{
                 //so terar essa propriedade se for para mobile
-                left: IsMobile ? (left == 0 ? 110 :  0) + '%' : "0"
+                left: IsMobile ? (left == 0 ? 110 : 0) + '%' : "0"
             }}
+
+            //aria
+            //se ele esta expandido ou nao.
+            aria-expanded={IsMobile && left != 0 ? 'false' : "true"
+            }
         >
-            <ul className="NOTYPELIST">
-                <li>
+            <ul className="NOTYPELIST" aria-hidden="true">
+                <li aria-hidden="true">
                     <img src={MundoImg} alt="Imagem de um globo" className='img-globo'/>
                 </li>
-                <li>
+                <li aria-hidden="true">
                     <p className='sigla-lingua'>{Sigla}</p>
                 </li>
-                <li>
+                <li aria-hidden="true">
                     <img
                         src={ArrowBottom}
                         alt="imagem de um flecha pra abaixo"
